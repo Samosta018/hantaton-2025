@@ -1,11 +1,258 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GigaCheck - Анализ документов</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
-    <h1>Тест</h1>
+    <!-- Хедер -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="#" class="logo">
+                    <i class="fas fa-file-alt"></i>
+                    <span>GigaCheck</span>
+                </a>
+                
+                <nav class="nav">
+                    <a href="#" class="nav__link active"><i class="fas fa-home"></i> Главная</a>
+                    <a href="#" class="nav__link"><i class="fas fa-info-circle"></i> О сервисе</a>
+                    <a href="#" class="nav__link"><i class="fas fa-dollar-sign"></i> Тарифы</a>
+                    <a href="#" class="nav__link"><i class="fas fa-question-circle"></i> Помощь</a>
+                    <a href="#" class="nav__link"><i class="fas fa-envelope"></i> Контакты</a>
+                </nav>
+                <button class="burger" id="burger">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Герой секция -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__inner">
+                <div class="hero__content">
+                    <h1 class="hero__title">Профессиональный анализ <span>Word</span> и <span>Excel</span> документов</h1>
+                    <p class="hero__text">GigaCheck помогает автоматизировать проверку документов, находить ошибки, создавать структуру и готовить документы по ГОСТу за считанные минуты</p>
+                    <div class="hero__buttons">
+                        <a href="#analyze" class="btn btn--primary btn--large"><i class="fas fa-rocket"></i> Попробовать сейчас</a>
+                        <a href="#" class="btn btn--outline btn--large"><i class="fas fa-play-circle"></i> Видеообзор</a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <img src="../static/images/files_types.png" alt="Документы" class="animate-float">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция возможностей -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Что умеет GigaCheck?</h2>
+            <p class="section-subtitle">Мощные инструменты для работы с документами</p>
+            
+            <div class="features__grid">
+                <div class="feature-card">
+                    <div class="feature-card__icon">
+                        <i class="fas fa-spell-check"></i>
+                    </div>
+                    <h3 class="feature-card__title">Анализ ошибок</h3>
+                    <p class="feature-card__text">Находит орфографические, грамматические и пунктуационные ошибки в тексте</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card__icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="feature-card__title">Краткое содержание</h3>
+                    <p class="feature-card__text">Создает краткое изложение документа с выделением ключевых моментов</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card__icon">
+                        <i class="fas fa-list-ol"></i>
+                    </div>
+                    <h3 class="feature-card__title">Оглавление</h3>
+                    <p class="feature-card__text">Автоматически генерирует оглавление документа с номерами страниц</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card__icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="feature-card__title">Статистика</h3>
+                    <p class="feature-card__text">Подробная статистика по документу: количество слов, страниц, таблиц и графиков</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card__icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 class="feature-card__title">Структура</h3>
+                    <p class="feature-card__text">Анализирует и улучшает структуру документа для лучшей читаемости</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card__icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3 class="feature-card__title">ГОСТ форматирование</h3>
+                    <p class="feature-card__text">Приводит документ в соответствие с требованиями ГОСТ за несколько кликов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция анализа -->
+    <section class="analyze" id="analyze">
+        <div class="container">
+            <h2 class="section-title">Анализ документа</h2>
+            <p class="section-subtitle">Загрузите файл или вставьте текст для анализа</p>
+            
+            <div class="analyze__form">
+                <div class="analyze__upload">
+                    <div class="upload-area" id="uploadArea">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3 class="upload-area__title">Перетащите файл сюда</h3>
+                        <p class="upload-area__text">или</p>
+                        <label for="fileInput" class="btn btn--primary">
+                            <i class="fas fa-folder-open"></i> Выберите файл
+                        </label>
+                        <input type="file" id="fileInput" accept=".doc,.docx,.xls,.xlsx">
+                        <p class="upload-area__hint">Поддерживаются: DOC, DOCX, XLS, XLSX</p>
+                    </div>
+                </div>
+                
+                <div class="analyze__options">
+                    <div class="analyze__text">
+                        <label for="textInput" class="analyze__label"><i class="fas fa-align-left"></i> Или введите текст вручную:</label>
+                        <textarea id="textInput" class="analyze__textarea" placeholder="Вставьте текст для анализа..."></textarea>
+                    </div>
+                    
+                    <div class="analyze__checkboxes">
+                        <h3 class="analyze__options-title"><i class="fas fa-tasks"></i> Параметры анализа:</h3>
+                        
+                        <div class="checkbox-group">
+                            <label class="checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkbox__custom"></span>
+                                <span class="checkbox__text"><i class="fas fa-spell-check"></i> Анализ ошибок</span>
+                            </label>
+                            
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__custom"></span>
+                                <span class="checkbox__text"><i class="fas fa-file-contract"></i> Краткое содержание</span>
+                            </label>
+                            
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__custom"></span>
+                                <span class="checkbox__text"><i class="fas fa-list-ol"></i> Оглавление</span>
+                            </label>
+                            
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__custom"></span>
+                                <span class="checkbox__text"><i class="fas fa-chart-bar"></i> Статистика по документу</span>
+                            </label>
+                            
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__custom"></span>
+                                <span class="checkbox__text"><i class="fas fa-project-diagram"></i> Структурированные данные</span>
+                            </label>
+                            
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__custom"></span>
+                                <span class="checkbox__text"><i class="fas fa-university"></i> Форматирование под ГОСТ</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn--primary btn--large btn--block analyze__submit">
+                        <i class="fas fa-magic"></i> Проанализировать документ
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция результатов -->
+    <section class="results">
+        <div class="container">
+            <h2 class="section-title">Результаты анализа</h2>
+            <p class="section-subtitle">Здесь будут отображаться результаты проверки вашего документа</p>
+            
+            <div class="results__placeholder">
+                <i class="fas fa-file-search"></i>
+                <p>Загрузите документ, чтобы увидеть результаты анализа</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <div class="logo">
+                        <i class="fas fa-file-alt"></i>
+                        <span>GigaCheck</span>
+                    </div>
+                    <p class="footer__text">Сервис профессионального анализа документов для студентов, преподавателей и бизнеса.</p>
+                    <div class="footer__social">
+                        <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__col">
+                    <h3 class="footer__title">Навигация</h3>
+                    <ul class="footer__links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Главная</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Возможности</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Тарифы</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__col">
+                    <h3 class="footer__title">Помощь</h3>
+                    <ul class="footer__links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Документация</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Поддержка</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__contacts">
+                        <li><i class="fas fa-envelope"></i> support@gigacheck.ru</li>
+                        <li><i class="fas fa-phone-alt"></i> +7 (912) 573-62-24</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Ханты-Мансийск, ул. Студенческая, 7</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 GigaCheck. Все права защищены.</p>
+                <div class="footer__legal">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../static/js/script.js"></script>
 </body>
 </html>
