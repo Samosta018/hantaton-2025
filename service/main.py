@@ -4,6 +4,7 @@ import os
 import requests
 from typing import List, Dict
 from docx import Document
+import pdfminer.high_level
 import openpyxl
 import re
 import json
@@ -18,7 +19,7 @@ class GigaCheck:
         self.functions = {
             "short_content_gigachat": "Составь краткое описание документа. Ответ в формате: Краткое содержание: *краткое содержимое*. Ничего лишнего!", # Краткое содержание
             "check_spelling": "", # Проверка орфографии
-            "check_punctuation_gigachat": "Найди в документе пунктуационные ошибки и исправь их. В ответе присылай только исправленные предложения и ничего более!", # Проверка пунктуации
+            "check_punctuation_gigachat": "В тексте документа необходимо расставить недостающие запятые и убрать лишние.", # Проверка пунктуации
         }
     
     def extract_text_from_docx(self, path_to_docx): # КОНВЕРТ ИЗ ДОК В СТРОКУ
@@ -119,16 +120,101 @@ class GigaCheck:
             
             if file_type == "docx":
                 self.spell_change_to_docx(path_to_file, corrections)
-            else:
-                with open(path_to_file, 'w', encoding='utf-8') as f:
-                    for wrong_word, correction in corrections.items():
-                        text = text.replace(wrong_word, correction)
-                    f.write(text)
             
             return "; ".join(errors)
                 
         except Exception as e:
             return {"status": "error", "message": f"Непредвиденная ошибка: {str(e)}"}
+    
+    def punctuation_change_to_docx(self, path_to_file, word_pairs):
+        doc = Document(path_to_file)
+        
+        required_commas = {tuple(pair) for pair in word_pairs}
+        
+        def process_runs(runs):
+            if not runs:
+                return None, 0
+
+            full_text = ''.join(run.text for run in runs)
+            original_text = full_text
+            modified = False
+            changes = []
+
+            comma_pattern = re.compile(r'(\w+)\s*,\s*(\w+)', re.IGNORECASE)
+            for match in comma_pattern.finditer(full_text):
+                word1, word2 = match.groups()
+                if (word1.lower(), word2.lower()) not in required_commas:
+                    full_text = full_text[:match.start(1)] + word1 + '  ' + word2 + full_text[match.end(2):]
+                    changes.append(f"Удалена лишняя запятая между: {word1} и {word2}")
+                    modified = True
+
+            for word1, word2 in word_pairs:
+                pattern = re.compile(f'({word1})\s+({word2})', re.IGNORECASE)
+                new_text, count = pattern.subn(fr'\1, \2', full_text)
+                if count > 0:
+                    full_text = new_text
+                    changes.append(f"Добавлена запятая между: {word1} и {word2}")
+                    modified = True
+
+            if modified:
+                runs[0].text = full_text
+                for run in runs[1:]:
+                    run.text = ''
+                return changes
+            return None
+
+        all_changes = []
+        
+        for paragraph in doc.paragraphs:
+            changes = process_runs(paragraph.runs)
+            if changes:
+                all_changes.extend(changes)
+
+        for table in doc.tables:
+            for row in table.rows:
+                for cell in row.cells:
+                    for paragraph in cell.paragraphs:
+                        changes = process_runs(paragraph.runs)
+                        if changes:
+                            all_changes.extend(changes)
+
+        for section in doc.sections:
+            for paragraph in section.header.paragraphs:
+                changes = process_runs(paragraph.runs)
+                if changes:
+                    all_changes.extend(changes)
+            for paragraph in section.footer.paragraphs:
+                changes = process_runs(paragraph.runs)
+                if changes:
+                    all_changes.extend(changes)
+
+        doc.save(path_to_file)
+        return all_changes
+
+    def punctuation_processing(self, change_text, path_to_file):
+        original_text = self.extract_text_from_docx(path_to_file)
+        
+        correct_text = change_text
+        
+        sentences = correct_text.replace(',', ' , ').split('. ')
+        word_pairs = []
+
+        for sentence in sentences:
+            words = sentence.split()
+            for i in range(len(words)-1):
+                if words[i] == ',':
+                    if i > 0 and i < len(words)-1:
+                        pair = [words[i-1], words[i+1]]
+                        word_pairs.append(pair)
+
+        changes = self.punctuation_change_to_docx(path_to_file, word_pairs)
+        
+        if changes:
+            report = "Ошибки пунктуации были исправлены!"
+        else:
+            report = "Все правила пунктуации в документе соблюдены."
+        
+        return report
     
     
     def delete_file(self, fileid: str) -> None: # УДАЛЕНИЕ ФАЙЛА ИЗ ХРАНИЛИЩА ГИГАЧАТА
@@ -162,8 +248,15 @@ class GigaCheck:
                     ],
                     "temperature": 0.1
                 })
-                    
-                results[analysis_type] = result.choices[0].message.content
+                
+                if "short_content_gigachat" in analysis_type:
+                    results[analysis_type] = result.choices[0].message.content
+                elif "check_punctuation_gigachat" in analysis_type:
+                    results[analysis_type] = self.punctuation_processing(
+                        result.choices[0].message.content, 
+                        path_to_file
+                    )
+
                 self.delete_file(fileid)
                 
             elif analysis_type == "check_spelling":
@@ -174,4 +267,3 @@ class GigaCheck:
     
 
 gigacheck = GigaCheck()
-
