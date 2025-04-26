@@ -1,1 +1,7 @@
 flask
+flask_cors
+gigachat
+requests
+dotenv
+openpyxl
+python-docx

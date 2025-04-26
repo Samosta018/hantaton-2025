@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
-    <!-- Хедер -->
     <header class="header">
         <div class="container">
             <div class="header__inner">
@@ -16,7 +15,6 @@
                     <i class="fas fa-file-alt"></i>
                     <span>GigaCheck</span>
                 </a>
-                
                 <nav class="nav">
                     <a href="#" class="nav__link active"><i class="fas fa-home"></i> Главная</a>
                     <a href="#" class="nav__link"><i class="fas fa-info-circle"></i> О сервисе</a>
@@ -31,7 +29,6 @@
         </div>
     </header>
 
-    <!-- Герой секция -->
     <section class="hero">
         <div class="container">
             <div class="hero__inner">
@@ -50,12 +47,10 @@
         </div>
     </section>
 
-    <!-- Секция возможностей -->
     <section class="features">
         <div class="container">
             <h2 class="section-title">Что умеет GigaCheck?</h2>
             <p class="section-subtitle">Мощные инструменты для работы с документами</p>
-            
             <div class="features__grid">
                 <div class="feature-card">
                     <div class="feature-card__icon">
@@ -64,7 +59,6 @@
                     <h3 class="feature-card__title">Анализ ошибок</h3>
                     <p class="feature-card__text">Находит орфографические, грамматические и пунктуационные ошибки в тексте</p>
                 </div>
-                
                 <div class="feature-card">
                     <div class="feature-card__icon">
                         <i class="fas fa-file-contract"></i>
@@ -72,7 +66,6 @@
                     <h3 class="feature-card__title">Краткое содержание</h3>
                     <p class="feature-card__text">Создает краткое изложение документа с выделением ключевых моментов</p>
                 </div>
-                
                 <div class="feature-card">
                     <div class="feature-card__icon">
                         <i class="fas fa-list-ol"></i>
@@ -80,7 +73,6 @@
                     <h3 class="feature-card__title">Оглавление</h3>
                     <p class="feature-card__text">Автоматически генерирует оглавление документа с номерами страниц</p>
                 </div>
-                
                 <div class="feature-card">
                     <div class="feature-card__icon">
                         <i class="fas fa-chart-pie"></i>
@@ -88,7 +80,6 @@
                     <h3 class="feature-card__title">Статистика</h3>
                     <p class="feature-card__text">Подробная статистика по документу: количество слов, страниц, таблиц и графиков</p>
                 </div>
-                
                 <div class="feature-card">
                     <div class="feature-card__icon">
                         <i class="fas fa-project-diagram"></i>
@@ -96,7 +87,6 @@
                     <h3 class="feature-card__title">Структура</h3>
                     <p class="feature-card__text">Анализирует и улучшает структуру документа для лучшей читаемости</p>
                 </div>
-                
                 <div class="feature-card">
                     <div class="feature-card__icon">
                         <i class="fas fa-university"></i>
@@ -108,12 +98,10 @@
         </div>
     </section>
 
-    <!-- Секция анализа -->
     <section class="analyze" id="analyze">
         <div class="container">
             <h2 class="section-title">Анализ документа</h2>
             <p class="section-subtitle">Загрузите файл или вставьте текст для анализа</p>
-            
             <div class="analyze__form">
                 <div class="analyze__upload">
                     <div class="upload-area" id="uploadArea">
@@ -123,8 +111,8 @@
                         <label for="fileInput" class="btn btn--primary">
                             <i class="fas fa-folder-open"></i> Выберите файл
                         </label>
-                        <input type="file" id="fileInput" accept=".doc,.docx,.xls,.xlsx">
-                        <p class="upload-area__hint">Поддерживаются: DOC, DOCX, XLS, XLSX</p>
+                        <input type="file" id="fileInput" accept=".doc,.docx,.txt">
+                        <p class="upload-area__hint">Поддерживаются: DOC, DOCX, TXT</p>
                     </div>
                 </div>
                 
@@ -136,40 +124,34 @@
                     
                     <div class="analyze__checkboxes">
                         <h3 class="analyze__options-title"><i class="fas fa-tasks"></i> Параметры анализа:</h3>
-                        
                         <div class="checkbox-group">
                             <label class="checkbox">
-                                <input type="checkbox" checked>
+                                <input type="checkbox" checked id="spelling">
                                 <span class="checkbox__custom"></span>
                                 <span class="checkbox__text"><i class="fas fa-spell-check"></i> Анализ ошибок</span>
                             </label>
-                            
                             <label class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="summary">
                                 <span class="checkbox__custom"></span>
                                 <span class="checkbox__text"><i class="fas fa-file-contract"></i> Краткое содержание</span>
                             </label>
-                            
                             <label class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="toc">
                                 <span class="checkbox__custom"></span>
                                 <span class="checkbox__text"><i class="fas fa-list-ol"></i> Оглавление</span>
                             </label>
-                            
                             <label class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="stats">
                                 <span class="checkbox__custom"></span>
                                 <span class="checkbox__text"><i class="fas fa-chart-bar"></i> Статистика по документу</span>
                             </label>
-                            
                             <label class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="structure">
                                 <span class="checkbox__custom"></span>
                                 <span class="checkbox__text"><i class="fas fa-project-diagram"></i> Структурированные данные</span>
                             </label>
-                            
                             <label class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="gost">
                                 <span class="checkbox__custom"></span>
                                 <span class="checkbox__text"><i class="fas fa-university"></i> Форматирование под ГОСТ</span>
                             </label>
@@ -184,12 +166,8 @@
         </div>
     </section>
 
-    <!-- Секция результатов -->
     <section class="results">
-        <div class="container">
-            <h2 class="section-title">Результаты анализа</h2>
-            <p class="section-subtitle">Здесь будут отображаться результаты проверки вашего документа</p>
-            
+        <div class="container" id="resultsContainer">
             <div class="results__placeholder">
                 <i class="fas fa-file-search"></i>
                 <p>Загрузите документ, чтобы увидеть результаты анализа</p>
@@ -197,7 +175,6 @@
         </div>
     </section>
 
-    <!-- Футер -->
     <footer class="footer">
         <div class="container">
             <div class="footer__grid">
@@ -214,7 +191,6 @@
                         <a href="#" class="social-link"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
-                
                 <div class="footer__col">
                     <h3 class="footer__title">Навигация</h3>
                     <ul class="footer__links">
@@ -224,7 +200,6 @@
                         <li><a href="#"><i class="fas fa-chevron-right"></i> Контакты</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer__col">
                     <h3 class="footer__title">Помощь</h3>
                     <ul class="footer__links">
@@ -233,7 +208,6 @@
                         <li><a href="#"><i class="fas fa-chevron-right"></i> Поддержка</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer__col">
                     <h3 class="footer__title">Контакты</h3>
                     <ul class="footer__contacts">
@@ -243,7 +217,6 @@
                     </ul>
                 </div>
             </div>
-            
             <div class="footer__bottom">
                 <p class="footer__copyright">© 2025 GigaCheck. Все права защищены.</p>
                 <div class="footer__legal">
@@ -253,6 +226,6 @@
             </div>
         </div>
     </footer>
-    <script src="../static/js/script.js"></script>
+    <script src="../static/js/analyze.js"></script>
 </body>
 </html>

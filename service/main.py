@@ -2,12 +2,9 @@ from gigachat import GigaChat
 from dotenv import load_dotenv
 import os
 import requests
-from typing import List, Dict
+from typing import Dict
 from docx import Document
-import pdfminer.high_level
-import openpyxl
 import re
-import json
 from urllib.parse import quote
 
 load_dotenv()
@@ -169,6 +166,3 @@ class GigaCheck:
     
 
 gigacheck = GigaCheck()
-
-results = gigacheck.analysis_file("otchet.docx", {"check_spelling": True})
-print(results["check_spelling"])

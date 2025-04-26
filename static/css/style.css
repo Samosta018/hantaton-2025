@@ -561,6 +561,53 @@ body {
     color: var(--whte-color);
 }
 
+/* Анализ */
+.results__content {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.result-item {
+    margin-bottom: 30px;
+}
+
+.result-item h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.result-item h3 i {
+    color: #3498db;
+}
+
+.error {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.loading-spinner {
+    text-align: center;
+    padding: 30px;
+    color: #3498db;
+}
+
+.loading-spinner i {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.loading-spinner p {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+
 /* Адаптивность */
 @media (max-width: 992px) {
     .hero__inner {
