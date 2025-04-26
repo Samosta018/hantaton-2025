@@ -6,17 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const resultsContainer = document.getElementById('resultsContainer');
     const analyzeSubmit = document.querySelector('.analyze__submit');
 
-    // Проверяем, что все элементы существуют
     if (!analyzeForm || !fileInput || !textInput || !uploadArea || !resultsContainer || !analyzeSubmit) {
-        console.error('One or more required elements are missing:');
-        console.log({
-            analyzeForm,
-            fileInput,
-            textInput,
-            uploadArea,
-            resultsSection,
-            analyzeSubmit
-        });
+        console.error('One or more required elements are missing');
         return;
     }
 
@@ -35,8 +26,58 @@ document.addEventListener('DOMContentLoaded', function () {
                 <i class="fas fa-exclamation-triangle"></i>
                 <h3>Произошла ошибка</h3>
                 <p>${message}</p>
+                <button class="btn btn--outline" onclick="location.reload()">Попробовать снова</button>
             </div>
         `;
+    }
+
+    function showSuccess(results, downloadUrl) {
+        let resultsHTML = `
+            <div class="results__content">
+                <h2 class="section-title">Результаты анализа</h2>
+        `;
+
+        if (results.short_content_gigachat) {
+            resultsHTML += `
+                <div class="result-item">
+                    <h3><i class="fas fa-file-contract"></i> Краткое содержание:</h3>
+                    <div class="result-content">${results.short_content_gigachat}</div>
+                </div>
+            `;
+        }
+
+        if (results.check_spelling) {
+            const spelling = results.check_spelling;
+            resultsHTML += `
+                <div class="result-item">
+                    <h3><i class="fas fa-spell-check"></i> Проверка орфографии:</h3>
+                    <div class="result-content">
+                        <p>Найдено ошибок: ${spelling.error_count}</p>
+                        ${spelling.error_count > 0 ? spelling.details.map(e => `
+                            <div class="spelling-error">
+                                <span class="error-word">${e.word}</span>
+                                <i class="fas fa-arrow-right"></i>
+                                <span class="suggestions">${e.suggestions.join(', ')}</span>
+                            </div>
+                        `).join('') : '<p>Ошибок не найдено</p>'}
+                    </div>
+                </div>
+            `;
+        }
+        
+        if (downloadUrl) {
+            resultsHTML += `
+                <div class="result-item">
+                    <h3><i class="fas fa-download"></i> Исправленный файл:</h3>
+                    <a href="${downloadUrl}" class="btn btn--primary" download>
+                        <i class="fas fa-download"></i> Скачать
+                    </a>
+                </div>
+            `;
+        }
+
+        resultsHTML += `</div>`;
+        resultsContainer.innerHTML = resultsHTML;
     }
 
     async function handleFormSubmit(e) {
@@ -57,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function () {
             formData.append('text', textInput.value.trim());
         }
 
-        // Добавляем параметры
         formData.append('summary', document.getElementById('summary').checked ? 'on' : 'off');
         formData.append('spelling', document.getElementById('spelling').checked ? 'on' : 'off');
 
@@ -67,68 +107,26 @@ document.addEventListener('DOMContentLoaded', function () {
                 body: formData
             });
 
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
             const data = await response.json();
 
+            if (!response.ok) {
+                throw new Error(data.error || `HTTP error! status: ${response.status}`);
+            }
+
             if (data.success) {
-                let resultsHTML = `
-                    <div class="results__content">
-                        <h2 class="section-title">Результаты анализа</h2>
-                `;
-
-                if (data.results.short_content_gigachat) {
-                    resultsHTML += `
-                        <div class="result-item">
-                            <h3><i class="fas fa-file-contract"></i> Краткое содержание:</h3>
-                            <div class="result-content">${data.results.short_content_gigachat}</div>
-                        </div>
-                    `;
-                }
-
-                if (data.results.check_spelling) {
-                    resultsHTML += `
-                        <div class="result-item">
-                            <h3><i class="fas fa-spell-check"></i> Проверка орфографии:</h3>
-                            <div class="result-content">
-                                <p>Найдено ошибок: ${data.results.check_spelling.error_count}</p>
-                                ${data.results.check_spelling.details.map(e => `
-                                    <div class="spelling-error">
-                                        <span class="error-word">${e.word}</span>
-                                        <span class="suggestions">${e.suggestions.join(', ')}</span>
-                                    </div>
-                                `).join('')}
-                            </div>
-                        </div>
-                    `;
-                }
-                
-                console.log(window.downloadPath);
-                resultsHTML += `
-                    <div class="result-item">
-                        <h3><i class="fas fa-download"></i> Исправленный файл:</h3>
-                        <a href="/uploads/${window.downloadPath}" class="btn btn--primary">
-                            <i class="fas fa-download"></i> Скачать "${window.fileName}"
-                        </a>
-                    </div>
-                `;
-                
-
-                resultsHTML += `</div>`;
-                resultsContainer.innerHTML = resultsHTML;
+                showSuccess(data.results, data.download_url);
             } else {
                 showError(data.error || 'Ошибка при анализе документа');
             }
         } catch (error) {
             showError(error.message);
+            console.error('Error:', error);
         }
     }
-    // Назначаем обработчик события
+
     analyzeSubmit.addEventListener('click', handleFormSubmit);
 
-    // Drag and Drop функционал
+    // Drag and drop functionality
     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
         uploadArea.addEventListener(eventName, preventDefaults, false);
     });
@@ -172,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             const fileName = file.name;
-            const fileSize = (file.size / 1024 / 1024).toFixed(2); // MB
+            const fileSize = (file.size / 1024 / 1024).toFixed(2);
 
             uploadArea.innerHTML = `
                 <i class="fas fa-file-alt"></i>
@@ -207,6 +205,11 @@ document.addEventListener('DOMContentLoaded', function () {
         return filename.match(/\.(docx?|txt)$/i);
     }
 
-    // Инициализация при загрузке
+    fileInput.addEventListener('change', function() {
+        if (this.files.length) {
+            handleFiles(this.files);
+        }
+    });
+
     console.log('Analyze script initialized successfully');
 });
