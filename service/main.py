@@ -2,9 +2,11 @@ from gigachat import GigaChat
 from dotenv import load_dotenv
 import os
 import requests
-from typing import Dict
+from typing import List, Dict
 from docx import Document
+import openpyxl
 import re
+import json
 from urllib.parse import quote
 
 load_dotenv()
@@ -16,7 +18,7 @@ class GigaCheck:
         self.functions = {
             "short_content_gigachat": "Составь краткое описание документа. Ответ в формате: Краткое содержание: *краткое содержимое*. Ничего лишнего!", # Краткое содержание
             "check_spelling": "", # Проверка орфографии
-            "punctuation_check": "", # Проверка пунктуации
+            "check_punctuation_gigachat": "Найди в документе пунктуационные ошибки и исправь их. В ответе присылай только исправленные предложения и ничего более!", # Проверка пунктуации
         }
     
     def extract_text_from_docx(self, path_to_docx): # КОНВЕРТ ИЗ ДОК В СТРОКУ
@@ -45,41 +47,47 @@ class GigaCheck:
         return ' '.join(full_text)
     
     def check_file(self, path_to_file): # ПРОВЕРКА РАСШИРЕНИЯ ФАЙЛА
-        if path_to_file.endswith('.docx') or path_to_file.endswith('.doc'):
+        if path_to_file.endswith('.docx'):
             text = self.extract_text_from_docx(path_to_file)
             type_file = 'docx'
-        elif path_to_file.endswith('.txt'):
-            text = self.extract_text_from_docx(path_to_file)
         # elif path_to_file.endswith('.xlsx'):
         #     text = extract_text_from_xlsx(path_to_file)
         return text, type_file
 
     def spell_change_to_docx(self, path_to_file, corrections):
         doc = Document(path_to_file)
-        
-        def replace_in_runs(runs, old_text, new_text):
-            for run in runs:
-                if old_text in run.text:
-                    run.text = run.text.replace(old_text, new_text)
-        
-        for paragraph in doc.paragraphs:
+
+        def replace_in_runs(runs, corrections):
+            if not runs:
+                return
+
+            full_text = ''.join(run.text for run in runs)
+
             for wrong_word, correction in corrections.items():
-                replace_in_runs(paragraph.runs, wrong_word, correction)
-        
+                full_text = full_text.replace(wrong_word, correction)
+
+            runs[0].text = full_text
+            for run in runs[1:]:
+                run.text = ''
+
+        for paragraph in doc.paragraphs:
+            replace_in_runs(paragraph.runs, corrections)
+
         for table in doc.tables:
             for row in table.rows:
                 for cell in row.cells:
                     for paragraph in cell.paragraphs:
-                        for wrong_word, correction in corrections.items():
-                            replace_in_runs(paragraph.runs, wrong_word, correction)
-        
+                        replace_in_runs(paragraph.runs, corrections)
+
         for section in doc.sections:
-            for paragraph in section.header.paragraphs:
-                for wrong_word, correction in corrections.items():
-                    replace_in_runs(paragraph.runs, wrong_word, correction)
-            for paragraph in section.footer.paragraphs:
-                for wrong_word, correction in corrections.items():
-                    replace_in_runs(paragraph.runs, wrong_word, correction)
+            header = section.header
+            footer = section.footer
+
+            for paragraph in header.paragraphs:
+                replace_in_runs(paragraph.runs, corrections)
+            
+            for paragraph in footer.paragraphs:
+                replace_in_runs(paragraph.runs, corrections)
 
         doc.save(path_to_file)
 
@@ -141,7 +149,7 @@ class GigaCheck:
             if not should_analyze:
                 continue
                 
-            if analysis_type == "gigachat":
+            if "gigachat" in analysis_type:
                 file = self.giga.upload_file(open(path_to_file, "rb"))
                 fileid = file.id_
                 result = self.giga.chat({
@@ -166,3 +174,4 @@ class GigaCheck:
     
 
 gigacheck = GigaCheck()
+
