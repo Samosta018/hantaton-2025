@@ -79,7 +79,7 @@ def upload_file():
         analysis_flags = {
             "short_content_gigachat": 'summary' in request.form,
             "check_spelling": 'spelling' in request.form,
-            "check_punctuation_gigachat": 'spelling' in request.form, # Можно добавить в интерфейс позже
+            "check_punctuation_gigachat": False  # Можно добавить в интерфейс позже
         }
 
         if not any(analysis_flags.values()):
