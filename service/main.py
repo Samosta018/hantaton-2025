@@ -4,7 +4,6 @@ import os
 import requests
 from typing import List, Dict
 from docx import Document
-import pdfminer.high_level
 import openpyxl
 import re
 import json
@@ -20,6 +19,7 @@ class GigaCheck:
             "short_content_gigachat": "Составь краткое описание документа. Ответ в формате: Краткое содержание: *краткое содержимое*. Ничего лишнего!", # Краткое содержание
             "check_spelling": "", # Проверка орфографии
             "check_punctuation_gigachat": "В тексте документа необходимо расставить недостающие запятые и убрать лишние.", # Проверка пунктуации
+            "check_create_content_gigachat": "Создай список оглавления для документа (только заголовки, НЕ MARKDOWN). Лишнее не придумывай и не пиши, только СПИСОК."
         }
     
     def extract_text_from_docx(self, path_to_docx): # КОНВЕРТ ИЗ ДОК В СТРОКУ
@@ -256,6 +256,8 @@ class GigaCheck:
                         result.choices[0].message.content, 
                         path_to_file
                     )
+                elif "check_create_content_gigachat" in analysis_type:
+                    results[analysis_type] = result.choices[0].message.content
 
                 self.delete_file(fileid)
                 

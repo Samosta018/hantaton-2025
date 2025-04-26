@@ -21,3 +21,134 @@
 2025-04-26 16:26:26,554 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 16:26:26] "POST /upload HTTP/1.1" 200 -
 2025-04-26 16:26:58,038 - __main__ - INFO - Download requested for file: processed_20250426_162621_jopa.docx
 2025-04-26 16:26:58,049 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 16:26:58] "GET /download/processed_20250426_162621_jopa.docx HTTP/1.1" 200 -
+2025-04-26 20:04:57,691 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-26 20:04:57,692 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 20:04:57,693 - werkzeug - INFO -  * Restarting with stat
+2025-04-26 20:04:58,314 - werkzeug - WARNING -  * Debugger is active!
+2025-04-26 20:04:58,316 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-26 20:05:03,332 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:05:03] "GET / HTTP/1.1" 200 -
+2025-04-26 20:05:03,368 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:05:03] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-04-26 20:05:03,370 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:05:03] "GET /static/images/files_types.png HTTP/1.1" 200 -
+2025-04-26 20:05:03,370 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:05:03] "GET /static/js/analyze.js HTTP/1.1" 200 -
+2025-04-26 20:05:03,415 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:05:03] "GET /static/css/normalize.css HTTP/1.1" 200 -
+2025-04-26 20:05:03,535 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:05:03] "GET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1" 200 -
+2025-04-26 20:05:03,591 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:05:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-26 20:05:27,170 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:05:27] "GET / HTTP/1.1" 200 -
+2025-04-26 20:05:27,186 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:05:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 20:05:27,188 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:05:27] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-26 20:05:27,189 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:05:27] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-26 20:05:27,192 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:05:27] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-26 20:05:27,200 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:05:27] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-26 20:05:38,614 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:05:38] "GET / HTTP/1.1" 200 -
+2025-04-26 20:05:38,628 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:05:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 20:05:38,630 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:05:38] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-26 20:05:38,631 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:05:38] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-26 20:05:38,633 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:05:38] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-26 20:05:38,640 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:05:38] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-26 20:07:50,353 - __main__ - INFO - File saved to: uploads\20250426_200750_Microsoft_Word.docx
+2025-04-26 20:07:50,353 - __main__ - INFO - Starting analysis for file: uploads\20250426_200750_Microsoft_Word.docx
+2025-04-26 20:07:51,536 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 401 Unauthorized"
+2025-04-26 20:07:51,536 - __main__ - ERROR - Error during analysis: (URL('https://gigachat.devices.sberbank.ru/api/v1/files'), 401, b'{"status":401,"message":"Unauthorized"}\n', Headers({'server': 'SynGX', 'date': 'Sat, 26 Apr 2025 15:08:01 GMT', 'content-type': 'application/json; charset=utf-8', 'content-length': '40', 'connection': 'keep-alive', 'x-request-id': '501d7210-b66a-474a-8103-6467457c91d7', 'x-session-id': '7f566ec5-ce12-4cd4-804d-f14a46245553', 'allow': 'GET, POST', 'strict-transport-security': 'max-age=31536000; includeSubDomains'}))
+Traceback (most recent call last):
+  File "c:\Desktop\Projects\hantaton-2025\app.py", line 92, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags)
+  File "c:\Desktop\Projects\hantaton-2025\service\main.py", line 239, in analysis_file
+    file = self.giga.upload_file(open(path_to_file, "rb"))
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 294, in upload_file
+    return self._decorator(
+           ~~~~~~~~~~~~~~~^
+        lambda: post_files.sync(self._client, file=file, purpose=purpose, access_token=self.token)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 260, in _decorator
+    return call()
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 295, in <lambda>
+    lambda: post_files.sync(self._client, file=file, purpose=purpose, access_token=self.token)
+            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\api\post_files.py", line 36, in sync
+    return build_response(response, UploadedFile)
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\api\utils.py", line 83, in build_response
+    raise AuthenticationError(response.url, response.status_code, response.content, response.headers)
+gigachat.exceptions.AuthenticationError: (URL('https://gigachat.devices.sberbank.ru/api/v1/files'), 401, b'{"status":401,"message":"Unauthorized"}\n', Headers({'server': 'SynGX', 'date': 'Sat, 26 Apr 2025 15:08:01 GMT', 'content-type': 'application/json; charset=utf-8', 'content-length': '40', 'connection': 'keep-alive', 'x-request-id': '501d7210-b66a-474a-8103-6467457c91d7', 'x-session-id': '7f566ec5-ce12-4cd4-804d-f14a46245553', 'allow': 'GET, POST', 'strict-transport-security': 'max-age=31536000; includeSubDomains'}))
+2025-04-26 20:07:51,541 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:07:51] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-26 20:09:14,469 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:09:14] "GET / HTTP/1.1" 200 -
+2025-04-26 20:09:14,486 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:09:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 20:09:14,487 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:09:14] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-26 20:09:14,487 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:09:14] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-26 20:09:14,492 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:09:14] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-26 20:09:14,498 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:09:14] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-26 20:09:19,855 - __main__ - INFO - File saved to: uploads\20250426_200919_Microsoft_Word.docx
+2025-04-26 20:09:19,855 - __main__ - INFO - Starting analysis for file: uploads\20250426_200919_Microsoft_Word.docx
+2025-04-26 20:09:20,836 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 401 Unauthorized"
+2025-04-26 20:09:20,837 - __main__ - ERROR - Error during analysis: (URL('https://gigachat.devices.sberbank.ru/api/v1/files'), 401, b'{"status":401,"message":"Unauthorized"}\n', Headers({'server': 'SynGX', 'date': 'Sat, 26 Apr 2025 15:09:30 GMT', 'content-type': 'application/json; charset=utf-8', 'content-length': '40', 'connection': 'keep-alive', 'x-request-id': '95bc098a-2a75-4de2-951b-867abfdde8a3', 'x-session-id': '3fd8b5bb-67a2-48f3-a912-f4fa4cfab685', 'allow': 'GET, POST', 'strict-transport-security': 'max-age=31536000; includeSubDomains'}))
+Traceback (most recent call last):
+  File "c:\Desktop\Projects\hantaton-2025\app.py", line 92, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags)
+  File "c:\Desktop\Projects\hantaton-2025\service\main.py", line 239, in analysis_file
+    file = self.giga.upload_file(open(path_to_file, "rb"))
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 294, in upload_file
+    return self._decorator(
+           ~~~~~~~~~~~~~~~^
+        lambda: post_files.sync(self._client, file=file, purpose=purpose, access_token=self.token)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 260, in _decorator
+    return call()
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 295, in <lambda>
+    lambda: post_files.sync(self._client, file=file, purpose=purpose, access_token=self.token)
+            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\api\post_files.py", line 36, in sync
+    return build_response(response, UploadedFile)
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\api\utils.py", line 83, in build_response
+    raise AuthenticationError(response.url, response.status_code, response.content, response.headers)
+gigachat.exceptions.AuthenticationError: (URL('https://gigachat.devices.sberbank.ru/api/v1/files'), 401, b'{"status":401,"message":"Unauthorized"}\n', Headers({'server': 'SynGX', 'date': 'Sat, 26 Apr 2025 15:09:30 GMT', 'content-type': 'application/json; charset=utf-8', 'content-length': '40', 'connection': 'keep-alive', 'x-request-id': '95bc098a-2a75-4de2-951b-867abfdde8a3', 'x-session-id': '3fd8b5bb-67a2-48f3-a912-f4fa4cfab685', 'allow': 'GET, POST', 'strict-transport-security': 'max-age=31536000; includeSubDomains'}))
+2025-04-26 20:09:20,839 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:09:20] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-26 20:10:11,665 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-26 20:10:11,665 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 20:10:11,666 - werkzeug - INFO -  * Restarting with stat
+2025-04-26 20:10:12,297 - werkzeug - WARNING -  * Debugger is active!
+2025-04-26 20:10:12,299 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-26 20:10:14,998 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:10:14] "GET / HTTP/1.1" 200 -
+2025-04-26 20:10:15,017 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:10:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 20:10:15,018 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:10:15] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-26 20:10:15,019 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:10:15] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-26 20:10:15,050 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:10:15] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-26 20:10:15,097 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:10:15] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-26 20:10:22,640 - __main__ - INFO - File saved to: uploads\20250426_201022_Microsoft_Word.docx
+2025-04-26 20:10:22,640 - __main__ - INFO - Starting analysis for file: uploads\20250426_201022_Microsoft_Word.docx
+2025-04-26 20:10:22,947 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-26 20:10:23,503 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-26 20:10:25,340 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-26 20:10:25,979 - __main__ - INFO - Processed file saved to: processed_files\processed_20250426_201022_Microsoft_Word.docx
+2025-04-26 20:10:25,979 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:10:25] "POST /upload HTTP/1.1" 200 -
+2025-04-26 20:10:53,545 - __main__ - INFO - Download requested for file: processed_20250426_201022_Microsoft_Word.docx
+2025-04-26 20:10:53,546 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:10:53] "GET /download/processed_20250426_201022_Microsoft_Word.docx HTTP/1.1" 200 -
+2025-04-26 20:13:12,702 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-26 20:13:12,703 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 20:13:12,704 - werkzeug - INFO -  * Restarting with stat
+2025-04-26 20:13:13,388 - werkzeug - WARNING -  * Debugger is active!
+2025-04-26 20:13:13,390 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-26 20:13:15,717 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:13:15] "GET / HTTP/1.1" 200 -
+2025-04-26 20:13:15,801 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:13:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 20:13:15,804 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:13:15] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-26 20:13:15,805 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:13:15] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-26 20:13:15,827 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:13:15] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-26 20:13:15,873 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:13:15] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-26 20:14:18,893 - werkzeug - INFO -  * Detected change in 'c:\\Desktop\\Projects\\hantaton-2025\\app.py', reloading
+2025-04-26 20:14:18,984 - werkzeug - INFO -  * Restarting with stat
+2025-04-26 20:14:19,602 - werkzeug - WARNING -  * Debugger is active!
+2025-04-26 20:14:19,603 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-26 20:36:27,002 - __main__ - INFO - File saved to: uploads\20250426_203627_Microsoft_Word.docx
+2025-04-26 20:36:27,003 - __main__ - INFO - Starting analysis for file: uploads\20250426_203627_Microsoft_Word.docx
+2025-04-26 20:36:27,281 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-26 20:36:27,845 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-26 20:36:29,997 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-26 20:36:31,432 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-26 20:36:33,313 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-26 20:36:33,544 - __main__ - INFO - Processed file saved to: processed_files\processed_20250426_203627_Microsoft_Word.docx
+2025-04-26 20:36:33,545 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 20:36:33] "POST /upload HTTP/1.1" 200 -
