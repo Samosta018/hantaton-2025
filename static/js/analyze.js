@@ -46,6 +46,15 @@ document.addEventListener('DOMContentLoaded', function () {
             `;
         }
 
+        if (results.check_create_content_gigachat) {
+            resultsHTML += `
+                <div class="result-item">
+                    <h3><i class="fas fa-file-contract"></i> Предполагаемое оглавление:</h3>
+                    <div class="result-content">${results.check_create_content_gigachat}</div>
+                </div>
+            `;
+        }
+
         if (results.check_spelling) {
             const spelling = results.check_spelling;
             resultsHTML += `
@@ -100,6 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         formData.append('summary', document.getElementById('summary').checked ? 'on' : 'off');
         formData.append('spelling', document.getElementById('spelling').checked ? 'on' : 'off');
+        formData.append('toc', document.getElementById('toc').checked ? 'on' : 'off'); 
 
         try {
             const response = await fetch('/upload', {

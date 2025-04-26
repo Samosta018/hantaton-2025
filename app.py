@@ -79,7 +79,8 @@ def upload_file():
         analysis_flags = {
             "short_content_gigachat": 'summary' in request.form,
             "check_spelling": 'spelling' in request.form,
-            "check_punctuation_gigachat": False  # Можно добавить в интерфейс позже
+            "check_punctuation_gigachat": 'spelling' in request.form,
+            "check_create_content_gigachat": 'toc' in request.form,
         }
 
         if not any(analysis_flags.values()):
@@ -107,13 +108,16 @@ def upload_file():
             # Форматируем результаты для ответа
             formatted_results = {
                 'short_content_gigachat': results.get('short_content_gigachat', ''),
+                'check_create_content_gigachat': results.get('check_create_content_gigachat', ''),
                 'check_spelling': {
                     'error_count': len(results.get('check_spelling', '').split('; ')) if results.get('check_spelling') else 0,
-                    'details': [{'word': e.split(' → ')[0], 'suggestions': [e.split(' → ')[1]]} 
-                                for e in results.get('check_spelling', '').split('; ') if ' → ' in e]
+                    'details': [
+                        {'word': e.split(' → ')[0], 'suggestions': [e.split(' → ')[1]]} 
+                        for e in results.get('check_spelling', '').split('; ') 
+                        if ' → ' in e
+                    ]
                 } if results.get('check_spelling') else {'error_count': 0, 'details': []}
             }
-
             return jsonify({
                 'success': True,
                 'results': formatted_results,
