@@ -32,12 +32,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function showSuccess(results, downloadUrl) {
+        const showSummary = document.getElementById('summary').checked;
+        const showSpelling = document.getElementById('spelling').checked;
+        const showToc = document.getElementById('toc').checked;
+
         let resultsHTML = `
             <div class="results__content">
                 <h2 class="section-title">Результаты анализа</h2>
         `;
-
-        if (results.short_content_gigachat) {
+    
+        if (showSummary && results.short_content_gigachat) {
             resultsHTML += `
                 <div class="result-item">
                     <h3><i class="fas fa-file-contract"></i> Краткое содержание:</h3>
@@ -45,8 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             `;
         }
-
-        if (results.check_create_content_gigachat) {
+    
+        if (showToc && results.check_create_content_gigachat) {
             resultsHTML += `
                 <div class="result-item">
                     <h3><i class="fas fa-file-contract"></i> Предполагаемое оглавление:</h3>
@@ -54,8 +58,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             `;
         }
-
-        if (results.check_spelling) {
+    
+        if (showSpelling && results.check_spelling) {
             const spelling = results.check_spelling;
             resultsHTML += `
                 <div class="result-item">
@@ -73,7 +77,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             `;
         }
-        
+
+        if (showSpelling && results.check_punctuation_gigachat) {
+            resultsHTML += `
+                <div class="result-item">
+                    <h3><i class="fas fa-file-contract"></i> Проверка пунктуации:</h3>
+                    <div class="result-content">${results.check_punctuation_gigachat}</div>
+                </div>
+            `;
+        }
+
         if (downloadUrl) {
             resultsHTML += `
                 <div class="result-item">
@@ -84,11 +97,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             `;
         }
-
+    
         resultsHTML += `</div>`;
         resultsContainer.innerHTML = resultsHTML;
     }
-
     async function handleFormSubmit(e) {
         e.preventDefault();
 

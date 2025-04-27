@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 # Конфигурация
 UPLOAD_FOLDER = 'uploads'
 PROCESSED_FOLDER = 'processed_files'
-ALLOWED_EXTENSIONS = {'docx', 'doc', 'txt'}
+ALLOWED_EXTENSIONS = {'docx', 'xslx'}
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['PROCESSED_FOLDER'] = PROCESSED_FOLDER
@@ -109,6 +109,7 @@ def upload_file():
             formatted_results = {
                 'short_content_gigachat': results.get('short_content_gigachat', ''),
                 'check_create_content_gigachat': results.get('check_create_content_gigachat', ''),
+                'check_punctuation_gigachat': results.get('check_punctuation_gigachat', ''),
                 'check_spelling': {
                     'error_count': len(results.get('check_spelling', '').split('; ')) if results.get('check_spelling') else 0,
                     'details': [
