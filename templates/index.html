@@ -73,27 +73,6 @@
                     <h3 class="feature-card__title">Оглавление</h3>
                     <p class="feature-card__text">Автоматически генерирует оглавление документа с номерами страниц</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-card__icon">
-                        <i class="fas fa-chart-pie"></i>
-                    </div>
-                    <h3 class="feature-card__title">Статистика</h3>
-                    <p class="feature-card__text">Подробная статистика по документу: количество слов, страниц, таблиц и графиков</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-card__icon">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h3 class="feature-card__title">Структура</h3>
-                    <p class="feature-card__text">Анализирует и улучшает структуру документа для лучшей читаемости</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-card__icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <h3 class="feature-card__title">ГОСТ форматирование</h3>
-                    <p class="feature-card__text">Приводит документ в соответствие с требованиями ГОСТ за несколько кликов</p>
-                </div>
             </div>
         </div>
     </section>
@@ -111,8 +90,8 @@
                         <label for="fileInput" class="btn btn--primary">
                             <i class="fas fa-folder-open"></i> Выберите файл
                         </label>
-                        <input type="file" id="fileInput" accept=".doc,.docx,.txt">
-                        <p class="upload-area__hint">Поддерживаются: DOC, DOCX, TXT</p>
+                        <input type="file" id="fileInput" accept=".docx, .xslx">
+                        <p class="upload-area__hint">Поддерживаются: DOCX, XSLX</p>
                     </div>
                 </div>
                 
@@ -139,21 +118,6 @@
                                 <input type="checkbox" id="toc">
                                 <span class="checkbox__custom"></span>
                                 <span class="checkbox__text"><i class="fas fa-list-ol"></i> Оглавление</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" id="stats">
-                                <span class="checkbox__custom"></span>
-                                <span class="checkbox__text"><i class="fas fa-chart-bar"></i> Статистика по документу</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" id="structure">
-                                <span class="checkbox__custom"></span>
-                                <span class="checkbox__text"><i class="fas fa-project-diagram"></i> Структурированные данные</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" id="gost">
-                                <span class="checkbox__custom"></span>
-                                <span class="checkbox__text"><i class="fas fa-university"></i> Форматирование под ГОСТ</span>
                             </label>
                         </div>
                     </div>

@@ -19,7 +19,8 @@ class GigaCheck:
             "short_content_gigachat": "Составь краткое описание документа. Ответ в формате: Краткое содержание: *краткое содержимое*. Ничего лишнего!", # Краткое содержание
             "check_spelling": "", # Проверка орфографии
             "check_punctuation_gigachat": "В тексте документа необходимо расставить недостающие запятые и убрать лишние.", # Проверка пунктуации
-            "check_create_content_gigachat": "Создай список оглавления для документа (только заголовки, НЕ MARKDOWN). Лишнее не придумывай и не пиши, только СПИСОК."
+            "check_create_content_gigachat": "Создай список оглавления для документа (только заголовки, НЕ MARKDOWN). Лишнее не придумывай и не пиши, только СПИСОК.",
+            "user_request_gigachat": ""
         }
     
     def extract_text_from_docx(self, path_to_docx): # КОНВЕРТ ИЗ ДОК В СТРОКУ
@@ -228,8 +229,24 @@ class GigaCheck:
         response = requests.post(url, headers=headers, data={}, verify=False)
         return response.json()
     
-    def analysis_file(self, path_to_file: str, analysis_flags: Dict[str, bool]) -> Dict[str, str]:
-        results = {} 
+    def analysis_file(self, path_to_file: str, analysis_flags: Dict[str, bool], user_request_text: str = None) -> Dict[str, str]:
+        results = {}
+
+        if analysis_flags.get("user_request_gigachat") and user_request_text:
+            file = self.giga.upload_file(open(path_to_file, "rb"))
+            fileid = file.id_
+            result = self.giga.chat({
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": user_request_text,
+                        "attachments": [fileid],
+                    }
+                ],
+                "temperature": 0.1
+            })
+            results["user_request_gigachat"] = result.choices[0].message.content
+            self.delete_file(fileid)
         
         for analysis_type, should_analyze in analysis_flags.items():
             if not should_analyze:
@@ -238,16 +255,30 @@ class GigaCheck:
             if "gigachat" in analysis_type:
                 file = self.giga.upload_file(open(path_to_file, "rb"))
                 fileid = file.id_
-                result = self.giga.chat({
-                    "messages": [
-                        {
-                            "role": "user",
-                            "content": self.functions[analysis_type],
-                            "attachments": [fileid],
-                        }
-                    ],
-                    "temperature": 0.1
-                })
+                if "user_request_gigachat" not in analysis_type:
+                    result = self.giga.chat({
+                        "messages": [
+                            {
+                                "role": "user",
+                                "content": self.functions[analysis_type],
+                                "attachments": [fileid],
+                            }
+                        ],
+                        "temperature": 0.1
+                    })
+                elif "user_request_gigachat" in analysis_type and user_request_text != None:
+                    result = self.giga.chat({
+                        "messages": [
+                            {
+                                "role": "user",
+                                "content": user_request_text,
+                                "attachments": [fileid],
+                            }
+                        ],
+                        "temperature": 0.1
+                    })
+                    results[analysis_type] = result.choices[0].message.content
+                    continue
                 
                 if "short_content_gigachat" in analysis_type:
                     results[analysis_type] = result.choices[0].message.content

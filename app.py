@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 # Конфигурация
 UPLOAD_FOLDER = 'uploads'
 PROCESSED_FOLDER = 'processed_files'
-ALLOWED_EXTENSIONS = {'docx', 'doc', 'txt'}
+ALLOWED_EXTENSIONS = {'docx', 'xslx'}
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['PROCESSED_FOLDER'] = PROCESSED_FOLDER
@@ -81,7 +81,10 @@ def upload_file():
             "check_spelling": 'spelling' in request.form,
             "check_punctuation_gigachat": 'spelling' in request.form,
             "check_create_content_gigachat": 'toc' in request.form,
+            "user_request_gigachat": 'text' in request.form and request.form['text'].strip() != ''
         }
+
+        user_request_text = request.form['text'].strip() if 'text' in request.form else None
 
         if not any(analysis_flags.values()):
             logger.error("No analysis options selected")
@@ -109,6 +112,7 @@ def upload_file():
             formatted_results = {
                 'short_content_gigachat': results.get('short_content_gigachat', ''),
                 'check_create_content_gigachat': results.get('check_create_content_gigachat', ''),
+                'check_punctuation_gigachat': results.get('check_punctuation_gigachat', ''),
                 'check_spelling': {
                     'error_count': len(results.get('check_spelling', '').split('; ')) if results.get('check_spelling') else 0,
                     'details': [
@@ -116,7 +120,8 @@ def upload_file():
                         for e in results.get('check_spelling', '').split('; ') 
                         if ' → ' in e
                     ]
-                } if results.get('check_spelling') else {'error_count': 0, 'details': []}
+                } if results.get('check_spelling') else {'error_count': 0, 'details': []},
+                'user_request_gigachat': results.get('user_request_gigachat', '')
             }
             return jsonify({
                 'success': True,
