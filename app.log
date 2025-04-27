@@ -796,3 +796,309 @@ httpx.ConnectTimeout: [WinError 10060] ѕопытка установить соединение была безусп
 2025-04-27 06:14:03,072 - werkzeug - INFO -  * Restarting with stat
 2025-04-27 06:14:03,724 - werkzeug - WARNING -  * Debugger is active!
 2025-04-27 06:14:03,726 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 06:32:24,071 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 06:32:24,072 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 06:32:24,073 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:32:24,785 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:32:24,787 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 06:32:25,931 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:32:25] "GET / HTTP/1.1" 200 -
+2025-04-27 06:32:25,956 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:32:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 06:32:25,957 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:32:25] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 06:32:25,958 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:32:25] "GET /static/js/analyze.js HTTP/1.1" 200 -
+2025-04-27 06:32:26,006 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:32:26] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 06:32:26,084 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:32:26] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 06:32:26,133 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:32:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-27 06:32:43,636 - __main__ - INFO - File saved to: uploads\20250427_063243_123.docx
+2025-04-27 06:32:43,636 - __main__ - INFO - Starting analysis for file: uploads\20250427_063243_123.docx
+2025-04-27 06:32:43,912 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 06:32:44,575 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:32:46,378 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 06:32:47,786 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:32:49,765 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 06:32:50,872 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:32:53,199 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 06:32:54,346 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:32:54,591 - __main__ - INFO - Processed file saved to: processed_files\processed_20250427_063243_123.docx
+2025-04-27 06:32:54,591 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:32:54] "POST /upload HTTP/1.1" 200 -
+2025-04-27 06:34:44,356 - werkzeug - INFO -  * Detected change in 'c:\\Desktop\\Projects\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 06:34:44,482 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:34:45,129 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:34:45,131 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 06:34:56,392 - werkzeug - INFO -  * Detected change in 'c:\\Desktop\\Projects\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 06:34:56,493 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:34:57,142 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:34:57,144 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 06:35:00,979 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 06:35:00,979 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 06:35:00,980 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:35:01,681 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:35:01,683 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 06:35:03,909 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:35:03] "GET / HTTP/1.1" 200 -
+2025-04-27 06:35:03,927 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:35:03] "GET /static/js/analyze.js HTTP/1.1" 200 -
+2025-04-27 06:35:03,927 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:35:03] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-04-27 06:35:03,927 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:35:03] "GET /static/images/files_types.png HTTP/1.1" 200 -
+2025-04-27 06:35:03,932 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:35:03] "GET /static/css/normalize.css HTTP/1.1" 200 -
+2025-04-27 06:35:04,044 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:35:04] "GET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1" 200 -
+2025-04-27 06:35:04,301 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:35:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-27 06:35:14,528 - __main__ - INFO - File saved to: uploads\20250427_063514_123.docx
+2025-04-27 06:35:14,528 - __main__ - INFO - Starting analysis for file: uploads\20250427_063514_123.docx
+2025-04-27 06:35:14,754 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 06:35:15,356 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:35:17,287 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 06:35:18,673 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:35:20,655 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 06:35:21,791 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:35:23,519 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 06:35:24,551 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:35:24,764 - __main__ - INFO - Processed file saved to: processed_files\processed_20250427_063514_123.docx
+2025-04-27 06:35:24,764 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:35:24] "POST /upload HTTP/1.1" 200 -
+2025-04-27 06:37:37,306 - werkzeug - INFO -  * Detected change in 'c:\\Desktop\\Projects\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 06:37:37,404 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:37:38,041 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:37:38,043 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 06:38:03,619 - werkzeug - INFO -  * Detected change in 'c:\\Desktop\\Projects\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 06:38:03,697 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:38:04,332 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:38:04,334 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 06:38:06,997 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 06:38:06,998 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 06:38:06,999 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:38:07,696 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:38:07,698 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 06:38:09,039 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:38:09] "GET / HTTP/1.1" 200 -
+2025-04-27 06:38:09,057 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:38:09] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-04-27 06:38:09,057 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:38:09] "GET /static/js/analyze.js HTTP/1.1" 200 -
+2025-04-27 06:38:09,058 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:38:09] "GET /static/images/files_types.png HTTP/1.1" 200 -
+2025-04-27 06:38:09,062 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:38:09] "GET /static/css/normalize.css HTTP/1.1" 200 -
+2025-04-27 06:38:09,364 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:38:09] "GET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1" 200 -
+2025-04-27 06:38:09,710 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:38:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-27 06:38:21,476 - __main__ - INFO - File saved to: uploads\20250427_063821_123.docx
+2025-04-27 06:38:21,477 - __main__ - INFO - Starting analysis for file: uploads\20250427_063821_123.docx
+2025-04-27 06:38:21,709 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 06:38:22,261 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:38:22,262 - __main__ - ERROR - Error during analysis: 1 validation error for Chat
+messages -> 0 -> content
+  none is not an allowed value (type=type_error.none.not_allowed)
+Traceback (most recent call last):
+  File "c:\Desktop\Projects\hantaton-2025\app.py", line 96, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags)
+  File "c:\Desktop\Projects\hantaton-2025\service\main.py", line 258, in analysis_file
+    result = self.giga.chat({
+        "messages": [
+    ...<6 lines>...
+        "temperature": 0.1
+    })
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 315, in chat
+    chat = _parse_chat(payload, self._settings)
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 108, in _parse_chat
+    chat = Chat.parse_obj(payload)
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\pydantic\v1\main.py", line 532, in parse_obj
+    return cls(**obj)
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\pydantic\v1\main.py", line 347, in __init__
+    raise validation_error
+pydantic.v1.error_wrappers.ValidationError: 1 validation error for Chat
+messages -> 0 -> content
+  none is not an allowed value (type=type_error.none.not_allowed)
+2025-04-27 06:38:22,267 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:38:22] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 06:38:27,280 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:38:27] "GET / HTTP/1.1" 200 -
+2025-04-27 06:38:27,302 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:38:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 06:38:27,303 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:38:27] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 06:38:27,305 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:38:27] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 06:38:27,309 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:38:27] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 06:38:27,316 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:38:27] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 06:38:37,437 - __main__ - INFO - File saved to: uploads\20250427_063837_123.docx
+2025-04-27 06:38:37,437 - __main__ - INFO - Starting analysis for file: uploads\20250427_063837_123.docx
+2025-04-27 06:38:38,051 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:38:38,052 - __main__ - ERROR - Error during analysis: 1 validation error for Chat
+messages -> 0 -> content
+  none is not an allowed value (type=type_error.none.not_allowed)
+Traceback (most recent call last):
+  File "c:\Desktop\Projects\hantaton-2025\app.py", line 96, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags)
+  File "c:\Desktop\Projects\hantaton-2025\service\main.py", line 258, in analysis_file
+    result = self.giga.chat({
+        "messages": [
+    ...<6 lines>...
+        "temperature": 0.1
+    })
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 315, in chat
+    chat = _parse_chat(payload, self._settings)
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 108, in _parse_chat
+    chat = Chat.parse_obj(payload)
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\pydantic\v1\main.py", line 532, in parse_obj
+    return cls(**obj)
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\pydantic\v1\main.py", line 347, in __init__
+    raise validation_error
+pydantic.v1.error_wrappers.ValidationError: 1 validation error for Chat
+messages -> 0 -> content
+  none is not an allowed value (type=type_error.none.not_allowed)
+2025-04-27 06:38:38,055 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:38:38] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 06:39:25,915 - werkzeug - INFO -  * Detected change in 'c:\\Desktop\\Projects\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 06:39:26,014 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:39:26,655 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:39:26,657 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 06:39:33,846 - werkzeug - INFO -  * Detected change in 'c:\\Desktop\\Projects\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 06:39:33,929 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:39:34,575 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:39:34,577 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 06:39:49,884 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 06:39:49,884 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 06:39:49,885 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:39:50,559 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:39:50,561 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 06:39:50,595 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:39:50] "GET / HTTP/1.1" 200 -
+2025-04-27 06:39:50,623 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:39:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 06:39:50,623 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:39:50] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 06:39:50,625 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:39:50] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 06:39:50,658 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:39:50] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 06:39:50,718 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:39:50] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 06:39:50,756 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:39:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-27 06:39:51,637 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:39:51] "GET / HTTP/1.1" 200 -
+2025-04-27 06:39:51,654 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:39:51] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-04-27 06:39:51,655 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:39:51] "GET /static/images/files_types.png HTTP/1.1" 200 -
+2025-04-27 06:39:51,656 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:39:51] "GET /static/js/analyze.js HTTP/1.1" 200 -
+2025-04-27 06:39:51,660 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:39:51] "GET /static/css/normalize.css HTTP/1.1" 200 -
+2025-04-27 06:39:51,759 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:39:51] "GET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1" 200 -
+2025-04-27 06:39:52,015 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:39:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-27 06:40:01,540 - __main__ - INFO - File saved to: uploads\20250427_064001_123.docx
+2025-04-27 06:40:01,540 - __main__ - INFO - Starting analysis for file: uploads\20250427_064001_123.docx
+2025-04-27 06:40:01,770 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 06:40:02,289 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:40:04,548 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 06:40:05,921 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:40:07,861 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 06:40:08,984 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:40:11,119 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 06:40:11,338 - __main__ - INFO - Processed file saved to: processed_files\processed_20250427_064001_123.docx
+2025-04-27 06:40:11,338 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:40:11] "POST /upload HTTP/1.1" 200 -
+2025-04-27 06:41:29,198 - werkzeug - INFO -  * Detected change in 'c:\\Desktop\\Projects\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 06:41:29,324 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:41:29,999 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:41:30,001 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 06:41:33,193 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 06:41:33,193 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 06:41:33,194 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:41:33,868 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:41:33,869 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 06:41:35,360 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:41:35] "GET / HTTP/1.1" 200 -
+2025-04-27 06:41:35,378 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:41:35] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-04-27 06:41:35,379 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:41:35] "GET /static/images/files_types.png HTTP/1.1" 200 -
+2025-04-27 06:41:35,379 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:41:35] "GET /static/js/analyze.js HTTP/1.1" 200 -
+2025-04-27 06:41:35,384 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:41:35] "GET /static/css/normalize.css HTTP/1.1" 200 -
+2025-04-27 06:41:35,485 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:41:35] "GET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1" 200 -
+2025-04-27 06:41:35,738 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:41:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-27 06:41:47,803 - __main__ - INFO - File saved to: uploads\20250427_064147_123.docx
+2025-04-27 06:41:47,803 - __main__ - INFO - Starting analysis for file: uploads\20250427_064147_123.docx
+2025-04-27 06:41:48,032 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 06:41:48,682 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:41:50,840 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 06:41:52,192 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:41:54,322 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 06:41:55,395 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:41:57,531 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 06:41:57,734 - __main__ - INFO - Processed file saved to: processed_files\processed_20250427_064147_123.docx
+2025-04-27 06:41:57,735 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:41:57] "POST /upload HTTP/1.1" 200 -
+2025-04-27 06:43:25,539 - werkzeug - INFO -  * Detected change in 'c:\\Desktop\\Projects\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 06:43:25,624 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:43:26,240 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:43:26,242 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 06:43:31,399 - werkzeug - INFO -  * Detected change in 'c:\\Desktop\\Projects\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 06:43:31,479 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:43:32,094 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:43:32,097 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 06:43:36,833 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 06:43:36,834 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 06:43:36,834 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:43:37,485 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:43:37,487 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 06:43:38,258 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:43:38] "GET / HTTP/1.1" 200 -
+2025-04-27 06:43:38,277 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:43:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 06:43:38,278 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:43:38] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 06:43:38,279 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:43:38] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 06:43:38,285 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:43:38] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 06:43:38,292 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:43:38] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 06:43:45,597 - __main__ - INFO - File saved to: uploads\20250427_064345_123.docx
+2025-04-27 06:43:45,597 - __main__ - INFO - Starting analysis for file: uploads\20250427_064345_123.docx
+2025-04-27 06:43:45,830 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 06:43:46,331 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:43:48,132 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 06:43:48,812 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:43:51,377 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 06:43:52,422 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:43:54,461 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 06:43:55,000 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:43:55,001 - __main__ - ERROR - Error during analysis: 1 validation error for Chat
+messages -> 0 -> content
+  none is not an allowed value (type=type_error.none.not_allowed)
+Traceback (most recent call last):
+  File "c:\Desktop\Projects\hantaton-2025\app.py", line 96, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags)
+  File "c:\Desktop\Projects\hantaton-2025\service\main.py", line 239, in analysis_file
+    result = self.giga.chat({
+        "messages": [
+    ...<6 lines>...
+        "temperature": 0.1
+    })
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 315, in chat
+    chat = _parse_chat(payload, self._settings)
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 108, in _parse_chat
+    chat = Chat.parse_obj(payload)
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\pydantic\v1\main.py", line 532, in parse_obj
+    return cls(**obj)
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\pydantic\v1\main.py", line 347, in __init__
+    raise validation_error
+pydantic.v1.error_wrappers.ValidationError: 1 validation error for Chat
+messages -> 0 -> content
+  none is not an allowed value (type=type_error.none.not_allowed)
+2025-04-27 06:43:55,004 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:43:55] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 06:45:22,979 - werkzeug - INFO -  * Detected change in 'c:\\Desktop\\Projects\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 06:45:23,064 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:45:23,684 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:45:23,686 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 06:46:07,613 - werkzeug - INFO -  * Detected change in 'c:\\Desktop\\Projects\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 06:46:07,717 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:46:08,370 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:46:08,372 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 06:46:15,366 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 06:46:15,366 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 06:46:15,367 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:46:16,041 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:46:16,043 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 06:46:16,778 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:46:16] "GET / HTTP/1.1" 200 -
+2025-04-27 06:46:16,794 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:46:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 06:46:16,795 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:46:16] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 06:46:16,795 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:46:16] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 06:46:16,799 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:46:16] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 06:46:16,806 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:46:16] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 06:46:18,926 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:46:18] "GET / HTTP/1.1" 200 -
+2025-04-27 06:46:18,938 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:46:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 06:46:18,940 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:46:18] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 06:46:18,941 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:46:18] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 06:46:18,944 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:46:18] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 06:46:18,951 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:46:18] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 06:46:22,225 - __main__ - INFO - File saved to: uploads\20250427_064622_123.docx
+2025-04-27 06:46:22,225 - __main__ - INFO - Starting analysis for file: uploads\20250427_064622_123.docx
+2025-04-27 06:46:22,430 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 06:46:22,964 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:46:25,132 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 06:46:26,642 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:46:28,631 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 06:46:29,761 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 06:46:31,565 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 06:46:31,784 - __main__ - INFO - Processed file saved to: processed_files\processed_20250427_064622_123.docx
+2025-04-27 06:46:31,785 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:46:31] "POST /upload HTTP/1.1" 200 -
+2025-04-27 06:47:40,115 - werkzeug - INFO -  * Detected change in 'c:\\Desktop\\Projects\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 06:47:40,217 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:47:40,833 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:47:40,835 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 06:48:10,475 - werkzeug - INFO -  * Detected change in 'c:\\Desktop\\Projects\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 06:48:10,561 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:48:11,382 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:48:11,385 - werkzeug - INFO -  * Debugger PIN: 143-304-984

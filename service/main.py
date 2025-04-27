@@ -230,7 +230,23 @@ class GigaCheck:
         return response.json()
     
     def analysis_file(self, path_to_file: str, analysis_flags: Dict[str, bool], user_request_text: str = None) -> Dict[str, str]:
-        results = {} 
+        results = {}
+
+        if analysis_flags.get("user_request_gigachat") and user_request_text:
+            file = self.giga.upload_file(open(path_to_file, "rb"))
+            fileid = file.id_
+            result = self.giga.chat({
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": user_request_text,
+                        "attachments": [fileid],
+                    }
+                ],
+                "temperature": 0.1
+            })
+            results["user_request_gigachat"] = result.choices[0].message.content
+            self.delete_file(fileid)
         
         for analysis_type, should_analyze in analysis_flags.items():
             if not should_analyze:
@@ -250,7 +266,7 @@ class GigaCheck:
                         ],
                         "temperature": 0.1
                     })
-                else:
+                elif "user_request_gigachat" in analysis_type and user_request_text != None:
                     result = self.giga.chat({
                         "messages": [
                             {
@@ -261,6 +277,8 @@ class GigaCheck:
                         ],
                         "temperature": 0.1
                     })
+                    results[analysis_type] = result.choices[0].message.content
+                    continue
                 
                 if "short_content_gigachat" in analysis_type:
                     results[analysis_type] = result.choices[0].message.content
@@ -269,7 +287,7 @@ class GigaCheck:
                         result.choices[0].message.content, 
                         path_to_file
                     )
-                elif "check_create_content_gigachat" in analysis_type or "user_request_gigachat" in analysis_type:
+                elif "check_create_content_gigachat" in analysis_type:
                     results[analysis_type] = result.choices[0].message.content
 
                 self.delete_file(fileid)

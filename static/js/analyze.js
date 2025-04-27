@@ -87,6 +87,15 @@ document.addEventListener('DOMContentLoaded', function () {
             `;
         }
 
+        if (results.user_request_gigachat) {
+            resultsHTML += `
+                <div class="result-item">
+                    <h3><i class="fas fa-comment-alt"></i> Ответ на ваш запрос:</h3>
+                    <div class="result-content">${results.user_request_gigachat}</div>
+                </div>
+            `;
+        }
+
         if (downloadUrl) {
             resultsHTML += `
                 <div class="result-item">

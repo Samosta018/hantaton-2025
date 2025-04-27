@@ -81,7 +81,10 @@ def upload_file():
             "check_spelling": 'spelling' in request.form,
             "check_punctuation_gigachat": 'spelling' in request.form,
             "check_create_content_gigachat": 'toc' in request.form,
+            "user_request_gigachat": 'text' in request.form and request.form['text'].strip() != ''
         }
+
+        user_request_text = request.form['text'].strip() if 'text' in request.form else None
 
         if not any(analysis_flags.values()):
             logger.error("No analysis options selected")
@@ -117,7 +120,8 @@ def upload_file():
                         for e in results.get('check_spelling', '').split('; ') 
                         if ' → ' in e
                     ]
-                } if results.get('check_spelling') else {'error_count': 0, 'details': []}
+                } if results.get('check_spelling') else {'error_count': 0, 'details': []},
+                'user_request_gigachat': results.get('user_request_gigachat', '')
             }
             return jsonify({
                 'success': True,
