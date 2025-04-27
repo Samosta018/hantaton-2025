@@ -1102,3 +1102,415 @@ messages -> 0 -> content
 2025-04-27 06:48:10,561 - werkzeug - INFO -  * Restarting with stat
 2025-04-27 06:48:11,382 - werkzeug - WARNING -  * Debugger is active!
 2025-04-27 06:48:11,385 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 06:48:46,799 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 06:48:46,799 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 06:48:46,800 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:48:47,458 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:48:47,460 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 07:01:11,551 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:01:11] "GET / HTTP/1.1" 200 -
+2025-04-27 07:01:11,573 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:01:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:01:11,574 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:01:11] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:01:11,575 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:01:11] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:01:11,620 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:01:11] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:01:11,682 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:01:11] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:01:21,239 - __main__ - INFO - File saved to: uploads\20250427_070121_123.docx
+2025-04-27 07:01:21,239 - __main__ - INFO - Starting analysis for file: uploads\20250427_070121_123.docx
+2025-04-27 07:01:21,649 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 07:01:22,257 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:01:24,357 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:01:25,992 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:01:27,914 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:01:29,015 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:01:31,471 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:01:31,683 - __main__ - INFO - Processed file saved to: processed_files\processed_20250427_070121_123.docx
+2025-04-27 07:01:31,683 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:01:31] "POST /upload HTTP/1.1" 200 -
+2025-04-27 07:09:50,916 - werkzeug - INFO -  * Detected change in 'c:\\Desktop\\Projects\\hantaton-2025\\app.py', reloading
+2025-04-27 07:09:51,004 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:09:51,672 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:09:51,674 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 07:09:55,281 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 07:09:55,281 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 07:09:55,282 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:09:55,924 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:09:55,927 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 07:09:57,913 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:09:57] "GET / HTTP/1.1" 200 -
+2025-04-27 07:09:57,943 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:09:57] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-04-27 07:09:57,944 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:09:57] "GET /static/images/files_types.png HTTP/1.1" 200 -
+2025-04-27 07:09:57,944 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:09:57] "GET /static/js/analyze.js HTTP/1.1" 200 -
+2025-04-27 07:09:57,977 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:09:57] "GET /static/css/normalize.css HTTP/1.1" 200 -
+2025-04-27 07:09:58,044 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:09:58] "GET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1" 200 -
+2025-04-27 07:09:58,306 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:09:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-27 07:10:08,313 - __main__ - INFO - File saved to: uploads\20250427_071008_123.docx
+2025-04-27 07:10:08,314 - __main__ - INFO - Starting analysis for file: uploads\20250427_071008_123.docx
+2025-04-27 07:10:08,589 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 07:10:09,132 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:10:10,997 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:10:11,534 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:10:13,665 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:10:14,952 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:10:17,595 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:10:18,665 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:10:20,716 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:10:21,831 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:10:23,670 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:10:23,681 - __main__ - INFO - Processed file saved to: processed_files\processed_20250427_071008_123.docx
+2025-04-27 07:10:23,682 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:10:23] "POST /upload HTTP/1.1" 200 -
+2025-04-27 07:10:31,618 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:10:31] "GET / HTTP/1.1" 200 -
+2025-04-27 07:10:31,636 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:10:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:10:31,641 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:10:31] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:10:31,641 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:10:31] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:10:31,643 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:10:31] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:10:31,650 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:10:31] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:10:36,079 - __main__ - INFO - File saved to: uploads\20250427_071036_123.docx
+2025-04-27 07:10:36,079 - __main__ - INFO - Starting analysis for file: uploads\20250427_071036_123.docx
+2025-04-27 07:10:37,188 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:10:39,273 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:10:40,534 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:10:42,176 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:10:43,593 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:10:45,888 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:10:46,096 - __main__ - INFO - Processed file saved to: processed_files\processed_20250427_071036_123.docx
+2025-04-27 07:10:46,096 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:10:46] "POST /upload HTTP/1.1" 200 -
+2025-04-27 07:10:50,687 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:10:50] "GET / HTTP/1.1" 200 -
+2025-04-27 07:10:50,702 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:10:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:10:50,704 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:10:50] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:10:50,705 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:10:50] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:10:50,706 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:10:50] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:10:50,712 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:10:50] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:10:57,247 - __main__ - INFO - File saved to: uploads\20250427_071057_123.docx
+2025-04-27 07:10:57,247 - __main__ - INFO - Starting analysis for file: uploads\20250427_071057_123.docx
+2025-04-27 07:10:57,931 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:11:00,057 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:11:01,302 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:11:03,369 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:11:05,497 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:11:07,545 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:11:07,752 - __main__ - INFO - Processed file saved to: processed_files\processed_20250427_071057_123.docx
+2025-04-27 07:11:07,752 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:11:07] "POST /upload HTTP/1.1" 200 -
+2025-04-27 07:11:11,391 - __main__ - INFO - Download requested for file: processed_20250427_071057_123.docx
+2025-04-27 07:11:11,392 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:11:11] "GET /download/processed_20250427_071057_123.docx HTTP/1.1" 200 -
+2025-04-27 07:11:35,059 - werkzeug - INFO -  * Detected change in 'c:\\Desktop\\Projects\\hantaton-2025\\app.py', reloading
+2025-04-27 07:11:35,182 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:11:35,812 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:11:35,814 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 07:14:24,154 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 07:14:24,155 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 07:14:24,156 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:14:24,886 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:14:24,888 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 07:14:28,567 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:14:28] "GET / HTTP/1.1" 200 -
+2025-04-27 07:14:28,586 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:14:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-04-27 07:14:28,586 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:14:28] "GET /static/js/analyze.js HTTP/1.1" 200 -
+2025-04-27 07:14:28,587 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:14:28] "GET /static/images/files_types.png HTTP/1.1" 200 -
+2025-04-27 07:14:28,593 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:14:28] "GET /static/css/normalize.css HTTP/1.1" 200 -
+2025-04-27 07:14:28,729 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:14:28] "GET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1" 200 -
+2025-04-27 07:14:28,955 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:14:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-27 07:14:41,713 - __main__ - INFO - File saved to: uploads\20250427_071441_123.docx
+2025-04-27 07:14:41,714 - __main__ - INFO - Starting analysis for file: uploads\20250427_071441_123.docx
+2025-04-27 07:14:41,971 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 07:14:42,539 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:14:44,691 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:14:46,095 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:14:48,057 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:14:49,118 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:14:51,175 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:14:51,390 - __main__ - INFO - Processed file saved to: processed_files\processed_20250427_071441_123.docx
+2025-04-27 07:14:51,390 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:14:51] "POST /upload HTTP/1.1" 200 -
+2025-04-27 07:16:47,282 - werkzeug - INFO -  * Detected change in 'c:\\Desktop\\Projects\\hantaton-2025\\app.py', reloading
+2025-04-27 07:16:47,400 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:16:48,084 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:16:48,086 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 07:17:08,308 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:17:08] "GET / HTTP/1.1" 200 -
+2025-04-27 07:17:08,324 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:17:08] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-04-27 07:17:08,325 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:17:08] "GET /static/images/files_types.png HTTP/1.1" 200 -
+2025-04-27 07:17:08,326 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:17:08] "GET /static/js/analyze.js HTTP/1.1" 200 -
+2025-04-27 07:17:08,330 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:17:08] "GET /static/css/normalize.css HTTP/1.1" 200 -
+2025-04-27 07:17:08,429 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:17:08] "GET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1" 200 -
+2025-04-27 07:17:08,746 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:17:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-27 07:19:42,711 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 07:19:42,712 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 07:19:42,713 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:19:43,339 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:19:43,341 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 07:19:44,846 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:19:44] "GET / HTTP/1.1" 200 -
+2025-04-27 07:19:44,862 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:19:44] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-04-27 07:19:44,863 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:19:44] "GET /static/js/analyze.js HTTP/1.1" 200 -
+2025-04-27 07:19:44,863 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:19:44] "GET /static/images/files_types.png HTTP/1.1" 200 -
+2025-04-27 07:19:44,868 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:19:44] "GET /static/css/normalize.css HTTP/1.1" 200 -
+2025-04-27 07:19:45,002 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:19:45] "GET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1" 200 -
+2025-04-27 07:19:45,233 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:19:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-27 07:19:50,435 - __main__ - INFO - File saved to: uploads\20250427_071950_123.docx
+2025-04-27 07:19:50,435 - __main__ - INFO - Starting analysis for file: uploads\20250427_071950_123.docx
+2025-04-27 07:19:50,696 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 07:19:51,483 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:19:53,628 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:19:55,054 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:19:56,993 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:19:58,099 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:20:00,149 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:20:00,353 - __main__ - INFO - Processed file saved to: processed_files\processed_20250427_071950_123.docx
+2025-04-27 07:20:00,354 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:20:00] "POST /upload HTTP/1.1" 200 -
+2025-04-27 07:20:43,960 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 07:20:43,960 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 07:20:43,961 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:20:44,614 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:20:44,616 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 07:20:45,269 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:20:45] "GET / HTTP/1.1" 200 -
+2025-04-27 07:20:45,289 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:20:45] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-04-27 07:20:45,289 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:20:45] "GET /static/js/analyze.js HTTP/1.1" 200 -
+2025-04-27 07:20:45,290 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:20:45] "GET /static/images/files_types.png HTTP/1.1" 200 -
+2025-04-27 07:20:45,296 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:20:45] "GET /static/css/normalize.css HTTP/1.1" 200 -
+2025-04-27 07:20:45,398 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:20:45] "GET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1" 200 -
+2025-04-27 07:20:45,640 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:20:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-27 07:20:51,159 - __main__ - INFO - File saved to: uploads\20250427_072051_123.docx
+2025-04-27 07:20:51,159 - __main__ - INFO - Starting analysis for file: uploads\20250427_072051_123.docx
+2025-04-27 07:20:51,374 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 07:20:51,943 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:20:54,045 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:20:55,365 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:20:57,071 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:20:58,175 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:21:00,281 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:21:00,483 - __main__ - INFO - Processed file saved to: processed_files\processed_20250427_072051_123.docx
+2025-04-27 07:21:00,483 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:21:00] "POST /upload HTTP/1.1" 200 -
+2025-04-27 07:22:46,995 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 07:22:46,995 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 07:22:46,996 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:22:47,673 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:22:47,675 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 07:22:51,318 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:22:51] "GET / HTTP/1.1" 200 -
+2025-04-27 07:22:51,337 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:22:51] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-04-27 07:22:51,337 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:22:51] "GET /static/images/files_types.png HTTP/1.1" 200 -
+2025-04-27 07:22:51,337 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:22:51] "GET /static/js/analyze.js HTTP/1.1" 200 -
+2025-04-27 07:22:51,343 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:22:51] "GET /static/css/normalize.css HTTP/1.1" 200 -
+2025-04-27 07:22:51,441 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:22:51] "GET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1" 200 -
+2025-04-27 07:22:51,679 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:22:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-27 07:23:18,486 - __main__ - INFO - File saved to: uploads\20250427_072318_123.docx
+2025-04-27 07:23:18,486 - __main__ - INFO - Starting analysis for file: uploads\20250427_072318_123.docx
+2025-04-27 07:23:18,713 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 07:23:19,217 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:23:21,111 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:23:22,273 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:23:24,182 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:23:25,566 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:23:27,519 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:23:28,663 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:23:31,035 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:23:31,641 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:23:33,531 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:23:33,540 - __main__ - INFO - Processed file saved to: processed_files\processed_20250427_072318_123.docx
+2025-04-27 07:23:33,541 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:23:33] "POST /upload HTTP/1.1" 200 -
+2025-04-27 07:23:42,114 - __main__ - INFO - File saved to: uploads\20250427_072342_123.docx
+2025-04-27 07:23:42,114 - __main__ - INFO - Starting analysis for file: uploads\20250427_072342_123.docx
+2025-04-27 07:23:42,771 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:23:44,435 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:23:45,029 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:23:47,144 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:23:48,393 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:23:50,419 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:23:51,564 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:23:53,810 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:23:54,398 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:23:56,355 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:23:56,363 - __main__ - INFO - Processed file saved to: processed_files\processed_20250427_072342_123.docx
+2025-04-27 07:23:56,364 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:23:56] "POST /upload HTTP/1.1" 200 -
+2025-04-27 07:25:25,894 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:25:25] "GET / HTTP/1.1" 200 -
+2025-04-27 07:25:25,913 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:25:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:25:25,913 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:25:25] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:25:25,914 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:25:25] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:25:25,920 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:25:25] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:25:25,930 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:25:25] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:26:05,676 - __main__ - INFO - File saved to: uploads\20250427_072605_docx
+2025-04-27 07:26:05,676 - __main__ - INFO - Starting analysis for file: uploads\20250427_072605_docx
+2025-04-27 07:26:06,806 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 400 Bad Request"
+2025-04-27 07:26:06,806 - __main__ - ERROR - Error during analysis: (URL('https://gigachat.devices.sberbank.ru/api/v1/files'), 400, b'{"status":400,"message":"File format application/octet-stream is not supported"}\n', Headers({'server': 'SynGX', 'date': 'Sun, 27 Apr 2025 02:26:17 GMT', 'content-type': 'application/json; charset=utf-8', 'content-length': '81', 'connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-allow-headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'access-control-allow-methods': 'GET, POST, DELETE, OPTIONS', 'access-control-allow-origin': 'https://beta.saluteai.sberdevices.ru', 'x-request-id': '60b84473-03c4-43e8-9eec-8002e9dd7893', 'x-session-id': 'e275dabe-c98d-41cc-a10a-c6979e7c6d8a', 'allow': 'GET, POST', 'strict-transport-security': 'max-age=31536000; includeSubDomains'}))
+Traceback (most recent call last):
+  File "c:\Desktop\Projects\hantaton-2025\app.py", line 96, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags, user_request_text)
+  File "c:\Desktop\Projects\hantaton-2025\service\main.py", line 236, in analysis_file
+    file = self.giga.upload_file(open(path_to_file, "rb"))
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 294, in upload_file
+    return self._decorator(
+           ~~~~~~~~~~~~~~~^
+        lambda: post_files.sync(self._client, file=file, purpose=purpose, access_token=self.token)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 255, in _decorator
+    return call()
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 295, in <lambda>
+    lambda: post_files.sync(self._client, file=file, purpose=purpose, access_token=self.token)
+            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\api\post_files.py", line 36, in sync
+    return build_response(response, UploadedFile)
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\api\utils.py", line 85, in build_response
+    raise ResponseError(response.url, response.status_code, response.content, response.headers)
+gigachat.exceptions.ResponseError: (URL('https://gigachat.devices.sberbank.ru/api/v1/files'), 400, b'{"status":400,"message":"File format application/octet-stream is not supported"}\n', Headers({'server': 'SynGX', 'date': 'Sun, 27 Apr 2025 02:26:17 GMT', 'content-type': 'application/json; charset=utf-8', 'content-length': '81', 'connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-allow-headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'access-control-allow-methods': 'GET, POST, DELETE, OPTIONS', 'access-control-allow-origin': 'https://beta.saluteai.sberdevices.ru', 'x-request-id': '60b84473-03c4-43e8-9eec-8002e9dd7893', 'x-session-id': 'e275dabe-c98d-41cc-a10a-c6979e7c6d8a', 'allow': 'GET, POST', 'strict-transport-security': 'max-age=31536000; includeSubDomains'}))
+2025-04-27 07:26:06,811 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:26:06] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 07:26:25,310 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 07:26:25,310 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 07:26:25,312 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:26:25,947 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:26:25,948 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 07:26:30,677 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:26:30] "GET / HTTP/1.1" 200 -
+2025-04-27 07:26:30,692 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:26:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:26:30,693 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:26:30] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:26:30,693 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:26:30] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:26:30,697 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:26:30] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:26:30,704 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:26:30] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:26:37,372 - __main__ - INFO - File saved to: uploads\20250427_072637_docx
+2025-04-27 07:26:37,373 - __main__ - INFO - Starting analysis for file: uploads\20250427_072637_docx
+2025-04-27 07:26:37,597 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 07:26:38,034 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 400 Bad Request"
+2025-04-27 07:26:38,035 - __main__ - ERROR - Error during analysis: (URL('https://gigachat.devices.sberbank.ru/api/v1/files'), 400, b'{"status":400,"message":"File format application/octet-stream is not supported"}\n', Headers({'server': 'SynGX', 'date': 'Sun, 27 Apr 2025 02:26:49 GMT', 'content-type': 'application/json; charset=utf-8', 'content-length': '81', 'connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-allow-headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'access-control-allow-methods': 'GET, POST, DELETE, OPTIONS', 'access-control-allow-origin': 'https://beta.saluteai.sberdevices.ru', 'x-request-id': '8a24bace-493e-4ef2-b199-ff0980e30ba3', 'x-session-id': 'a88ffa45-f9bb-4267-92a0-e199f9894c86', 'allow': 'GET, POST', 'strict-transport-security': 'max-age=31536000; includeSubDomains'}))
+Traceback (most recent call last):
+  File "c:\Desktop\Projects\hantaton-2025\app.py", line 96, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags, user_request_text)
+  File "c:\Desktop\Projects\hantaton-2025\service\main.py", line 236, in analysis_file
+    file = self.giga.upload_file(open(path_to_file, "rb"))
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 294, in upload_file
+    return self._decorator(
+           ~~~~~~~~~~~~~~~^
+        lambda: post_files.sync(self._client, file=file, purpose=purpose, access_token=self.token)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 260, in _decorator
+    return call()
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 295, in <lambda>
+    lambda: post_files.sync(self._client, file=file, purpose=purpose, access_token=self.token)
+            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\api\post_files.py", line 36, in sync
+    return build_response(response, UploadedFile)
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\api\utils.py", line 85, in build_response
+    raise ResponseError(response.url, response.status_code, response.content, response.headers)
+gigachat.exceptions.ResponseError: (URL('https://gigachat.devices.sberbank.ru/api/v1/files'), 400, b'{"status":400,"message":"File format application/octet-stream is not supported"}\n', Headers({'server': 'SynGX', 'date': 'Sun, 27 Apr 2025 02:26:49 GMT', 'content-type': 'application/json; charset=utf-8', 'content-length': '81', 'connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-allow-headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'access-control-allow-methods': 'GET, POST, DELETE, OPTIONS', 'access-control-allow-origin': 'https://beta.saluteai.sberdevices.ru', 'x-request-id': '8a24bace-493e-4ef2-b199-ff0980e30ba3', 'x-session-id': 'a88ffa45-f9bb-4267-92a0-e199f9894c86', 'allow': 'GET, POST', 'strict-transport-security': 'max-age=31536000; includeSubDomains'}))
+2025-04-27 07:26:38,041 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:26:38] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 07:26:52,377 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:26:52] "GET / HTTP/1.1" 200 -
+2025-04-27 07:26:52,392 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:26:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:26:52,393 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:26:52] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:26:52,393 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:26:52] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:26:52,398 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:26:52] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:26:52,405 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:26:52] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:26:59,220 - __main__ - INFO - File saved to: uploads\20250427_072659_123.docx
+2025-04-27 07:26:59,220 - __main__ - INFO - Starting analysis for file: uploads\20250427_072659_123.docx
+2025-04-27 07:26:59,769 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:27:01,807 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:27:03,220 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:27:04,845 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:27:05,962 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:27:08,128 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:27:08,340 - __main__ - INFO - Processed file saved to: processed_files\processed_20250427_072659_123.docx
+2025-04-27 07:27:08,341 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:27:08] "POST /upload HTTP/1.1" 200 -
+2025-04-27 07:27:27,343 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:27:27] "GET / HTTP/1.1" 200 -
+2025-04-27 07:27:27,361 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:27:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:27:27,361 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:27:27] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:27:27,363 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:27:27] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:27:27,366 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:27:27] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:27:27,373 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:27:27] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:27:31,802 - __main__ - INFO - File saved to: uploads\20250427_072731_docx
+2025-04-27 07:27:31,803 - __main__ - INFO - Starting analysis for file: uploads\20250427_072731_docx
+2025-04-27 07:27:32,726 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 400 Bad Request"
+2025-04-27 07:27:32,726 - __main__ - ERROR - Error during analysis: (URL('https://gigachat.devices.sberbank.ru/api/v1/files'), 400, b'{"status":400,"message":"File format application/octet-stream is not supported"}\n', Headers({'server': 'SynGX', 'date': 'Sun, 27 Apr 2025 02:27:43 GMT', 'content-type': 'application/json; charset=utf-8', 'content-length': '81', 'connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-allow-headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'access-control-allow-methods': 'GET, POST, DELETE, OPTIONS', 'access-control-allow-origin': 'https://beta.saluteai.sberdevices.ru', 'x-request-id': '45249916-270b-4c2e-af7d-f07137e0efed', 'x-session-id': 'e0b2a7a2-9e99-4125-aae1-8676d0485524', 'allow': 'GET, POST', 'strict-transport-security': 'max-age=31536000; includeSubDomains'}))
+Traceback (most recent call last):
+  File "c:\Desktop\Projects\hantaton-2025\app.py", line 96, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags, user_request_text)
+  File "c:\Desktop\Projects\hantaton-2025\service\main.py", line 256, in analysis_file
+    file = self.giga.upload_file(open(path_to_file, "rb"))
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 294, in upload_file
+    return self._decorator(
+           ~~~~~~~~~~~~~~~^
+        lambda: post_files.sync(self._client, file=file, purpose=purpose, access_token=self.token)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 255, in _decorator
+    return call()
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 295, in <lambda>
+    lambda: post_files.sync(self._client, file=file, purpose=purpose, access_token=self.token)
+            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\api\post_files.py", line 36, in sync
+    return build_response(response, UploadedFile)
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\api\utils.py", line 85, in build_response
+    raise ResponseError(response.url, response.status_code, response.content, response.headers)
+gigachat.exceptions.ResponseError: (URL('https://gigachat.devices.sberbank.ru/api/v1/files'), 400, b'{"status":400,"message":"File format application/octet-stream is not supported"}\n', Headers({'server': 'SynGX', 'date': 'Sun, 27 Apr 2025 02:27:43 GMT', 'content-type': 'application/json; charset=utf-8', 'content-length': '81', 'connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-allow-headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'access-control-allow-methods': 'GET, POST, DELETE, OPTIONS', 'access-control-allow-origin': 'https://beta.saluteai.sberdevices.ru', 'x-request-id': '45249916-270b-4c2e-af7d-f07137e0efed', 'x-session-id': 'e0b2a7a2-9e99-4125-aae1-8676d0485524', 'allow': 'GET, POST', 'strict-transport-security': 'max-age=31536000; includeSubDomains'}))
+2025-04-27 07:27:32,730 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:27:32] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 07:27:39,061 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:27:39] "GET / HTTP/1.1" 200 -
+2025-04-27 07:27:39,076 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:27:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:27:39,077 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:27:39] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:27:39,078 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:27:39] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:27:39,082 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:27:39] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:27:39,087 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:27:39] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:28:49,259 - __main__ - INFO - File saved to: uploads\20250427_072849_docx
+2025-04-27 07:28:49,259 - __main__ - INFO - Starting analysis for file: uploads\20250427_072849_docx
+2025-04-27 07:28:50,265 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 400 Bad Request"
+2025-04-27 07:28:50,266 - __main__ - ERROR - Error during analysis: (URL('https://gigachat.devices.sberbank.ru/api/v1/files'), 400, b'{"status":400,"message":"File format application/octet-stream is not supported"}\n', Headers({'server': 'SynGX', 'date': 'Sun, 27 Apr 2025 02:29:01 GMT', 'content-type': 'application/json; charset=utf-8', 'content-length': '81', 'connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-allow-headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'access-control-allow-methods': 'GET, POST, DELETE, OPTIONS', 'access-control-allow-origin': 'https://beta.saluteai.sberdevices.ru', 'x-request-id': '5e3a488a-d27e-4b32-af99-8a3526df8306', 'x-session-id': '48b6b5d7-696f-48e1-97bc-b2ac175aa943', 'allow': 'GET, POST', 'strict-transport-security': 'max-age=31536000; includeSubDomains'}))
+Traceback (most recent call last):
+  File "c:\Desktop\Projects\hantaton-2025\app.py", line 96, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags, user_request_text)
+  File "c:\Desktop\Projects\hantaton-2025\service\main.py", line 236, in analysis_file
+    file = self.giga.upload_file(open(path_to_file, "rb"))
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 294, in upload_file
+    return self._decorator(
+           ~~~~~~~~~~~~~~~^
+        lambda: post_files.sync(self._client, file=file, purpose=purpose, access_token=self.token)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 255, in _decorator
+    return call()
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\client.py", line 295, in <lambda>
+    lambda: post_files.sync(self._client, file=file, purpose=purpose, access_token=self.token)
+            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\api\post_files.py", line 36, in sync
+    return build_response(response, UploadedFile)
+  File "C:\Desktop\Projects\hantaton-2025\venv\Lib\site-packages\gigachat\api\utils.py", line 85, in build_response
+    raise ResponseError(response.url, response.status_code, response.content, response.headers)
+gigachat.exceptions.ResponseError: (URL('https://gigachat.devices.sberbank.ru/api/v1/files'), 400, b'{"status":400,"message":"File format application/octet-stream is not supported"}\n', Headers({'server': 'SynGX', 'date': 'Sun, 27 Apr 2025 02:29:01 GMT', 'content-type': 'application/json; charset=utf-8', 'content-length': '81', 'connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-allow-headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'access-control-allow-methods': 'GET, POST, DELETE, OPTIONS', 'access-control-allow-origin': 'https://beta.saluteai.sberdevices.ru', 'x-request-id': '5e3a488a-d27e-4b32-af99-8a3526df8306', 'x-session-id': '48b6b5d7-696f-48e1-97bc-b2ac175aa943', 'allow': 'GET, POST', 'strict-transport-security': 'max-age=31536000; includeSubDomains'}))
+2025-04-27 07:28:50,268 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:28:50] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 07:30:20,438 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:30:20] "GET / HTTP/1.1" 200 -
+2025-04-27 07:30:20,453 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:30:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:30:20,454 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:30:20] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:30:20,455 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:30:20] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:30:20,458 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:30:20] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:30:20,464 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:30:20] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:32:13,918 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 07:32:13,918 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 07:32:13,920 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:32:14,603 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:32:14,605 - werkzeug - INFO -  * Debugger PIN: 143-304-984
+2025-04-27 07:32:14,638 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:32:14] "GET / HTTP/1.1" 200 -
+2025-04-27 07:32:14,676 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:32:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:32:14,676 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:32:14] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:32:14,681 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:32:14] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:32:14,708 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:32:14] "GET /static/css/normalize.css HTTP/1.1" 200 -
+2025-04-27 07:32:14,766 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:32:14] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:32:26,359 - __main__ - INFO - File saved to: uploads\20250427_073226_123.docx
+2025-04-27 07:32:26,359 - __main__ - INFO - Starting analysis for file: uploads\20250427_073226_123.docx
+2025-04-27 07:32:26,626 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 07:32:27,148 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:32:28,950 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:32:29,521 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:32:31,686 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:32:33,056 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:32:35,097 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:32:36,398 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:32:38,492 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:32:39,068 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:32:41,214 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:32:41,226 - __main__ - INFO - Processed file saved to: processed_files\processed_20250427_073226_123.docx
+2025-04-27 07:32:41,226 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:32:41] "POST /upload HTTP/1.1" 200 -
+2025-04-27 07:33:18,617 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:33:18] "GET / HTTP/1.1" 200 -
+2025-04-27 07:33:18,636 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:33:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:33:18,637 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:33:18] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:33:18,637 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:33:18] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:33:18,642 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:33:18] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:33:18,649 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:33:18] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -

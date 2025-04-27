@@ -93,7 +93,7 @@ def upload_file():
         # Выполняем анализ
         try:
             logger.info(f"Starting analysis for file: {file_path}")
-            results = gigacheck.analysis_file(file_path, analysis_flags)
+            results = gigacheck.analysis_file(file_path, analysis_flags, user_request_text)
             logger.info(f"Analysis completed. Results: {results}")
 
             # Генерируем имя для обработанного файла

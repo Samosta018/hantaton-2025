@@ -32,6 +32,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function showSuccess(results, downloadUrl) {
+        if (results.length == 0) {
+            alert("Выберите хотя бы 1 параметр или введите запрос!")
+        }
+
         const showSummary = document.getElementById('summary').checked;
         const showSpelling = document.getElementById('spelling').checked;
         const showToc = document.getElementById('toc').checked;
@@ -118,8 +122,6 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        showLoadingState();
-
         const formData = new FormData();
         if (fileInput.files.length > 0) {
             formData.append('file', fileInput.files[0]);
@@ -132,6 +134,15 @@ document.addEventListener('DOMContentLoaded', function () {
         formData.append('spelling', document.getElementById('spelling').checked ? 'on' : 'off');
         formData.append('toc', document.getElementById('toc').checked ? 'on' : 'off'); 
 
+        if (textInput.value.trim() === '' && 
+        !document.getElementById('summary').checked && 
+        !document.getElementById('spelling').checked && 
+        !document.getElementById('toc').checked) {
+            showError('Пожалуйста, выберите один параметр анализа или введите свой запрос');
+            return;
+        }
+
+        showLoadingState();
         try {
             const response = await fetch('/upload', {
                 method: 'POST',
