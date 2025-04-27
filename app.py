@@ -81,6 +81,7 @@ def upload_file():
             "check_spelling": 'spelling' in request.form,
             "check_punctuation_gigachat": 'spelling' in request.form,
             "check_create_content_gigachat": 'toc' in request.form,
+            "suggestion_gigachat": 'sug' in request.form,
             "user_request_gigachat": 'text' in request.form and request.form['text'].strip() != ''
         }
 
@@ -94,8 +95,7 @@ def upload_file():
         try:
             logger.info(f"Starting analysis for file: {file_path}")
             results = gigacheck.analysis_file(file_path, analysis_flags, user_request_text)
-            logger.info(f"Analysis completed. Results: {results}")
-
+            print(results)
             # Генерируем имя для обработанного файла
             processed_filename = f"processed_{os.path.basename(file_path)}"
             processed_filepath = os.path.join(app.config['PROCESSED_FOLDER'], processed_filename)
@@ -121,6 +121,7 @@ def upload_file():
                         if ' → ' in e
                     ]
                 } if results.get('check_spelling') else {'error_count': 0, 'details': []},
+                'suggestion_gigachat': results.get('suggestion_gigachat', ''),
                 'user_request_gigachat': results.get('user_request_gigachat', '')
             }
             return jsonify({

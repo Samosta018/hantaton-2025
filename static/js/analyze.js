@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const showSummary = document.getElementById('summary').checked;
         const showSpelling = document.getElementById('spelling').checked;
         const showToc = document.getElementById('toc').checked;
+        const showSug = document.getElementById('sug').checked;
 
         let resultsHTML = `
             <div class="results__content">
@@ -91,6 +92,15 @@ document.addEventListener('DOMContentLoaded', function () {
             `;
         }
 
+        if (showSug && results.suggestion_gigachat) {
+            resultsHTML += `
+                <div class="result-item">
+                    <h3><i class="fas fa-comment-alt"></i> Предложения по улучшению:</h3>
+                    <div class="result-content">${results.suggestion_gigachat}</div>
+                </div>
+            `;
+        }
+
         if (results.user_request_gigachat) {
             resultsHTML += `
                 <div class="result-item">
@@ -132,11 +142,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         formData.append('summary', document.getElementById('summary').checked ? 'on' : 'off');
         formData.append('spelling', document.getElementById('spelling').checked ? 'on' : 'off');
-        formData.append('toc', document.getElementById('toc').checked ? 'on' : 'off'); 
+        formData.append('toc', document.getElementById('toc').checked ? 'on' : 'off');
+        formData.append('sug', document.getElementById('sug').checked ? 'on' : 'off');
 
         if (textInput.value.trim() === '' && 
         !document.getElementById('summary').checked && 
         !document.getElementById('spelling').checked && 
+        !document.getElementById('sug').checked &&
         !document.getElementById('toc').checked) {
             showError('Пожалуйста, выберите один параметр анализа или введите свой запрос');
             return;

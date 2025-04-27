@@ -20,6 +20,7 @@ class GigaCheck:
             "check_spelling": "", # Проверка орфографии
             "check_punctuation_gigachat": "В тексте документа необходимо расставить недостающие запятые и убрать лишние.", # Проверка пунктуации
             "check_create_content_gigachat": "Создай список оглавления для документа (только заголовки, НЕ MARKDOWN). Лишнее не придумывай и не пиши, только СПИСОК.",
+            "suggestion_gigachat": "Предложи идеи по улучшению этого текста", # Предложения по улучшению
             "user_request_gigachat": ""
         }
     
@@ -281,6 +282,8 @@ class GigaCheck:
                     continue
                 
                 if "short_content_gigachat" in analysis_type:
+                    results[analysis_type] = result.choices[0].message.content
+                elif "suggestion_gigachat" in analysis_type:
                     results[analysis_type] = result.choices[0].message.content
                 elif "check_punctuation_gigachat" in analysis_type:
                     results[analysis_type] = self.punctuation_processing(
