@@ -1,0 +1,884 @@
+2025-04-27 06:56:35,562 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 06:56:35,564 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 06:56:35,566 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:56:36,630 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:56:36,636 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 06:56:40,920 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:56:40] "GET / HTTP/1.1" 200 -
+2025-04-27 06:56:40,965 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:56:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 06:56:40,966 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:56:40] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 06:56:40,967 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:56:40] "GET /static/js/analyze.js HTTP/1.1" 200 -
+2025-04-27 06:56:41,010 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:56:41] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 06:56:41,080 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:56:41] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 06:57:41,209 - __main__ - INFO - File saved to: uploads\20250427_065741_1.docx
+2025-04-27 06:57:41,210 - __main__ - INFO - Starting analysis for file: uploads\20250427_065741_1.docx
+2025-04-27 06:57:41,908 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 401 Unauthorized"
+2025-04-27 06:57:41,909 - __main__ - ERROR - Error during analysis: (URL('https://gigachat.devices.sberbank.ru/api/v1/files'), 401, b'{"status":401,"message":"Unauthorized"}\n', Headers({'server': 'SynGX', 'date': 'Sun, 27 Apr 2025 01:57:41 GMT', 'content-type': 'application/json; charset=utf-8', 'content-length': '40', 'connection': 'keep-alive', 'x-request-id': '78edd5e6-7692-4157-9f93-3949f957169b', 'x-session-id': 'ea6fcb25-cb0f-4692-97b4-c57321f925b3', 'allow': 'GET, POST', 'strict-transport-security': 'max-age=31536000; includeSubDomains'}))
+Traceback (most recent call last):
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\app.py", line 96, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 256, in analysis_file
+    file = self.giga.upload_file(open(path_to_file, "rb"))
+  File "C:\Users\Neo\Documents\GitHub\hantaton-2025\.venv\Lib\site-packages\gigachat\client.py", line 294, in upload_file
+    return self._decorator(
+           ~~~~~~~~~~~~~~~^
+        lambda: post_files.sync(self._client, file=file, purpose=purpose, access_token=self.token)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Neo\Documents\GitHub\hantaton-2025\.venv\Lib\site-packages\gigachat\client.py", line 260, in _decorator
+    return call()
+  File "C:\Users\Neo\Documents\GitHub\hantaton-2025\.venv\Lib\site-packages\gigachat\client.py", line 295, in <lambda>
+    lambda: post_files.sync(self._client, file=file, purpose=purpose, access_token=self.token)
+            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Neo\Documents\GitHub\hantaton-2025\.venv\Lib\site-packages\gigachat\api\post_files.py", line 36, in sync
+    return build_response(response, UploadedFile)
+  File "C:\Users\Neo\Documents\GitHub\hantaton-2025\.venv\Lib\site-packages\gigachat\api\utils.py", line 83, in build_response
+    raise AuthenticationError(response.url, response.status_code, response.content, response.headers)
+gigachat.exceptions.AuthenticationError: (URL('https://gigachat.devices.sberbank.ru/api/v1/files'), 401, b'{"status":401,"message":"Unauthorized"}\n', Headers({'server': 'SynGX', 'date': 'Sun, 27 Apr 2025 01:57:41 GMT', 'content-type': 'application/json; charset=utf-8', 'content-length': '40', 'connection': 'keep-alive', 'x-request-id': '78edd5e6-7692-4157-9f93-3949f957169b', 'x-session-id': 'ea6fcb25-cb0f-4692-97b4-c57321f925b3', 'allow': 'GET, POST', 'strict-transport-security': 'max-age=31536000; includeSubDomains'}))
+2025-04-27 06:57:41,916 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:57:41] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 06:59:32,751 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 06:59:32,752 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 06:59:32,753 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 06:59:33,774 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 06:59:33,779 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 06:59:54,527 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:59:54] "GET / HTTP/1.1" 200 -
+2025-04-27 06:59:54,555 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:59:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 06:59:54,558 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:59:54] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 06:59:54,561 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:59:54] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 06:59:54,569 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:59:54] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 06:59:54,655 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 06:59:54] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:00:09,132 - __main__ - INFO - File saved to: uploads\20250427_070009_1.docx
+2025-04-27 07:00:09,135 - __main__ - INFO - Starting analysis for file: uploads\20250427_070009_1.docx
+2025-04-27 07:00:09,673 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 07:00:10,278 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:00:12,690 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:00:14,286 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:00:17,731 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:00:17,750 - __main__ - ERROR - Error during analysis: unbalanced parenthesis at position 7
+Traceback (most recent call last):
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\app.py", line 96, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 286, in analysis_file
+    results[analysis_type] = self.punctuation_processing(
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        result.choices[0].message.content,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        path_to_file
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 211, in punctuation_processing
+    changes = self.punctuation_change_to_docx(path_to_file, word_pairs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 170, in punctuation_change_to_docx
+    changes = process_runs(paragraph.runs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 153, in process_runs
+    pattern = re.compile(f'({word1})\s+({word2})', re.IGNORECASE)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 289, in compile
+    return _compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 350, in _compile
+    p = _compiler.compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_compiler.py", line 748, in compile
+    p = _parser.parse(p, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_parser.py", line 985, in parse
+    raise source.error("unbalanced parenthesis")
+re.PatternError: unbalanced parenthesis at position 7
+2025-04-27 07:00:17,761 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:00:17] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 07:00:47,936 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:00:47] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:00:47,936 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:00:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:05:32,839 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Neo\\Documents\\GitHub\\hantaton-2025\\app.py', reloading
+2025-04-27 07:05:32,973 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:05:34,238 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:05:34,243 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 07:06:33,199 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:06:33] "GET / HTTP/1.1" 200 -
+2025-04-27 07:06:33,233 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:06:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:06:33,238 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:06:33] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:06:33,239 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:06:33] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:06:33,241 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:06:33] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:06:33,284 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:06:33] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:06:57,655 - __main__ - INFO - File saved to: uploads\20250427_070657_docx
+2025-04-27 07:06:57,656 - __main__ - INFO - Starting analysis for file: uploads\20250427_070657_docx
+2025-04-27 07:06:58,158 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 07:06:59,303 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 400 Bad Request"
+2025-04-27 07:06:59,304 - __main__ - ERROR - Error during analysis: (URL('https://gigachat.devices.sberbank.ru/api/v1/files'), 400, b'{"status":400,"message":"File format application/octet-stream is not supported"}\n', Headers({'server': 'SynGX', 'date': 'Sun, 27 Apr 2025 02:06:59 GMT', 'content-type': 'application/json; charset=utf-8', 'content-length': '81', 'connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-allow-headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'access-control-allow-methods': 'GET, POST, DELETE, OPTIONS', 'access-control-allow-origin': 'https://beta.saluteai.sberdevices.ru', 'x-request-id': '24b5246d-e02b-4c4a-860b-1e3f1eb39d6c', 'x-session-id': '17f717fc-cb3d-4d39-838a-b4f0211391e5', 'allow': 'GET, POST', 'strict-transport-security': 'max-age=31536000; includeSubDomains'}))
+Traceback (most recent call last):
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\app.py", line 96, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags, user_request_text)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 236, in analysis_file
+    file = self.giga.upload_file(open(path_to_file, "rb"))
+  File "C:\Users\Neo\Documents\GitHub\hantaton-2025\.venv\Lib\site-packages\gigachat\client.py", line 294, in upload_file
+    return self._decorator(
+           ~~~~~~~~~~~~~~~^
+        lambda: post_files.sync(self._client, file=file, purpose=purpose, access_token=self.token)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Neo\Documents\GitHub\hantaton-2025\.venv\Lib\site-packages\gigachat\client.py", line 260, in _decorator
+    return call()
+  File "C:\Users\Neo\Documents\GitHub\hantaton-2025\.venv\Lib\site-packages\gigachat\client.py", line 295, in <lambda>
+    lambda: post_files.sync(self._client, file=file, purpose=purpose, access_token=self.token)
+            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Neo\Documents\GitHub\hantaton-2025\.venv\Lib\site-packages\gigachat\api\post_files.py", line 36, in sync
+    return build_response(response, UploadedFile)
+  File "C:\Users\Neo\Documents\GitHub\hantaton-2025\.venv\Lib\site-packages\gigachat\api\utils.py", line 85, in build_response
+    raise ResponseError(response.url, response.status_code, response.content, response.headers)
+gigachat.exceptions.ResponseError: (URL('https://gigachat.devices.sberbank.ru/api/v1/files'), 400, b'{"status":400,"message":"File format application/octet-stream is not supported"}\n', Headers({'server': 'SynGX', 'date': 'Sun, 27 Apr 2025 02:06:59 GMT', 'content-type': 'application/json; charset=utf-8', 'content-length': '81', 'connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-allow-headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'access-control-allow-methods': 'GET, POST, DELETE, OPTIONS', 'access-control-allow-origin': 'https://beta.saluteai.sberdevices.ru', 'x-request-id': '24b5246d-e02b-4c4a-860b-1e3f1eb39d6c', 'x-session-id': '17f717fc-cb3d-4d39-838a-b4f0211391e5', 'allow': 'GET, POST', 'strict-transport-security': 'max-age=31536000; includeSubDomains'}))
+2025-04-27 07:06:59,311 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:06:59] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 07:07:19,732 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:07:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:07:19,734 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:07:19] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:41:58,085 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Neo\\Documents\\GitHub\\hantaton-2025\\app.py', reloading
+2025-04-27 07:41:58,215 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:41:59,619 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:41:59,624 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 07:42:43,919 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:42:43] "GET / HTTP/1.1" 200 -
+2025-04-27 07:42:43,954 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:42:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:42:43,959 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:42:43] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:42:43,960 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:42:43] "GET /static/js/analyze.js HTTP/1.1" 200 -
+2025-04-27 07:42:43,987 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:42:43] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:42:44,036 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:42:44] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:42:46,571 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:42:46] "GET / HTTP/1.1" 200 -
+2025-04-27 07:42:46,605 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:42:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:42:46,609 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:42:46] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:42:46,611 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:42:46] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:42:46,667 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:42:46] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:42:46,677 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:42:46] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:43:38,483 - __main__ - INFO - File saved to: uploads\20250427_074338_1.docx
+2025-04-27 07:43:38,483 - __main__ - INFO - Starting analysis for file: uploads\20250427_074338_1.docx
+2025-04-27 07:43:38,871 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 07:43:39,714 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:43:41,635 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:43:43,307 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:43:46,464 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:43:46,479 - __main__ - ERROR - Error during analysis: unbalanced parenthesis at position 7
+Traceback (most recent call last):
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\app.py", line 96, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags, user_request_text)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 286, in analysis_file
+    results[analysis_type] = self.punctuation_processing(
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        result.choices[0].message.content,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        path_to_file
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 211, in punctuation_processing
+    changes = self.punctuation_change_to_docx(path_to_file, word_pairs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 170, in punctuation_change_to_docx
+    changes = process_runs(paragraph.runs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 153, in process_runs
+    pattern = re.compile(f'({word1})\s+({word2})', re.IGNORECASE)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 289, in compile
+    return _compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 350, in _compile
+    p = _compiler.compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_compiler.py", line 748, in compile
+    p = _parser.parse(p, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_parser.py", line 985, in parse
+    raise source.error("unbalanced parenthesis")
+re.PatternError: unbalanced parenthesis at position 7
+2025-04-27 07:43:46,489 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:43:46] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 07:44:03,650 - __main__ - INFO - File saved to: uploads\20250427_074403_1.docx
+2025-04-27 07:44:03,651 - __main__ - INFO - Starting analysis for file: uploads\20250427_074403_1.docx
+2025-04-27 07:44:04,215 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:44:06,422 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:44:07,990 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:44:11,534 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:44:11,548 - __main__ - ERROR - Error during analysis: unbalanced parenthesis at position 7
+Traceback (most recent call last):
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\app.py", line 96, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags, user_request_text)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 286, in analysis_file
+    results[analysis_type] = self.punctuation_processing(
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        result.choices[0].message.content,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        path_to_file
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 211, in punctuation_processing
+    changes = self.punctuation_change_to_docx(path_to_file, word_pairs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 170, in punctuation_change_to_docx
+    changes = process_runs(paragraph.runs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 153, in process_runs
+    pattern = re.compile(f'({word1})\s+({word2})', re.IGNORECASE)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 289, in compile
+    return _compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 350, in _compile
+    p = _compiler.compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_compiler.py", line 748, in compile
+    p = _parser.parse(p, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_parser.py", line 985, in parse
+    raise source.error("unbalanced parenthesis")
+re.PatternError: unbalanced parenthesis at position 7
+2025-04-27 07:44:11,556 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:44:11] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 07:44:17,572 - __main__ - INFO - File saved to: uploads\20250427_074417_1.docx
+2025-04-27 07:44:17,573 - __main__ - INFO - Starting analysis for file: uploads\20250427_074417_1.docx
+2025-04-27 07:44:18,248 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:44:20,141 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:44:21,567 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:44:25,143 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:44:25,158 - __main__ - ERROR - Error during analysis: unbalanced parenthesis at position 7
+Traceback (most recent call last):
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\app.py", line 96, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags, user_request_text)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 286, in analysis_file
+    results[analysis_type] = self.punctuation_processing(
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        result.choices[0].message.content,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        path_to_file
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 211, in punctuation_processing
+    changes = self.punctuation_change_to_docx(path_to_file, word_pairs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 170, in punctuation_change_to_docx
+    changes = process_runs(paragraph.runs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 153, in process_runs
+    pattern = re.compile(f'({word1})\s+({word2})', re.IGNORECASE)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 289, in compile
+    return _compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 350, in _compile
+    p = _compiler.compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_compiler.py", line 748, in compile
+    p = _parser.parse(p, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_parser.py", line 985, in parse
+    raise source.error("unbalanced parenthesis")
+re.PatternError: unbalanced parenthesis at position 7
+2025-04-27 07:44:25,169 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:44:25] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 07:45:09,153 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Neo\\Documents\\GitHub\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 07:45:09,261 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:45:10,435 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:45:10,441 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 07:45:16,286 - __main__ - INFO - File saved to: uploads\20250427_074516_1.docx
+2025-04-27 07:45:16,287 - __main__ - INFO - Starting analysis for file: uploads\20250427_074516_1.docx
+2025-04-27 07:45:16,613 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 07:45:17,147 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:45:19,154 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:45:19,758 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:45:21,859 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:45:23,251 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:45:27,662 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:45:30,388 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:45:32,419 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:45:33,589 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:45:37,095 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:45:37,122 - __main__ - INFO - Processed file saved to: processed_files\processed_20250427_074516_1.docx
+2025-04-27 07:45:37,123 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:45:37] "POST /upload HTTP/1.1" 200 -
+2025-04-27 07:46:16,823 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Neo\\Documents\\GitHub\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 07:46:16,931 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:46:18,259 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:46:18,264 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 07:46:18,703 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:46:18] "GET / HTTP/1.1" 200 -
+2025-04-27 07:46:18,735 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:46:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:46:18,738 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:46:18] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:46:18,739 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:46:18] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:46:18,742 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:46:18] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:46:18,781 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:46:18] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:46:25,723 - __main__ - INFO - File saved to: uploads\20250427_074625_1.docx
+2025-04-27 07:46:25,724 - __main__ - INFO - Starting analysis for file: uploads\20250427_074625_1.docx
+2025-04-27 07:46:26,100 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 07:46:26,932 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:46:29,168 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:46:30,679 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:46:34,132 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:46:34,152 - __main__ - ERROR - Error during analysis: unbalanced parenthesis at position 7
+Traceback (most recent call last):
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\app.py", line 96, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags, user_request_text)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 286, in analysis_file
+    results[analysis_type] = self.punctuation_processing(
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        result.choices[0].message.content,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        path_to_file
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 211, in punctuation_processing
+    changes = self.punctuation_change_to_docx(path_to_file, word_pairs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 170, in punctuation_change_to_docx
+    changes = process_runs(paragraph.runs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 153, in process_runs
+    pattern = re.compile(f'({word1})\s+({word2})', re.IGNORECASE)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 289, in compile
+    return _compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 350, in _compile
+    p = _compiler.compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_compiler.py", line 748, in compile
+    p = _parser.parse(p, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_parser.py", line 985, in parse
+    raise source.error("unbalanced parenthesis")
+re.PatternError: unbalanced parenthesis at position 7
+2025-04-27 07:46:34,162 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:46:34] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 07:48:05,667 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Neo\\Documents\\GitHub\\hantaton-2025\\app.py', reloading
+2025-04-27 07:48:05,795 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:48:07,089 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:48:07,094 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 07:48:33,227 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Neo\\Documents\\GitHub\\hantaton-2025\\app.py', reloading
+2025-04-27 07:48:33,335 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:48:34,653 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:48:34,659 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 07:48:43,109 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Neo\\Documents\\GitHub\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 07:48:43,216 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:48:44,354 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:48:44,359 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 07:48:55,894 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Neo\\Documents\\GitHub\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 07:48:55,989 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:48:57,226 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:48:57,232 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 07:49:04,007 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:49:04] "GET / HTTP/1.1" 200 -
+2025-04-27 07:49:04,036 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:49:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:49:04,037 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:49:04] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:49:04,040 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:49:04] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:49:04,097 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:49:04] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:49:04,106 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:49:04] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:49:25,810 - __main__ - INFO - File saved to: uploads\20250427_074925_1.docx
+2025-04-27 07:49:25,811 - __main__ - INFO - Starting analysis for file: uploads\20250427_074925_1.docx
+2025-04-27 07:49:26,150 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 07:49:26,723 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:49:30,259 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:49:31,016 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:49:33,112 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:49:34,651 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:49:38,185 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:49:38,203 - __main__ - ERROR - Error during analysis: unbalanced parenthesis at position 7
+Traceback (most recent call last):
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\app.py", line 95, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags, user_request_text)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 286, in analysis_file
+    results[analysis_type] = self.punctuation_processing(
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        result.choices[0].message.content,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        path_to_file
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 211, in punctuation_processing
+    changes = self.punctuation_change_to_docx(path_to_file, word_pairs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 170, in punctuation_change_to_docx
+    changes = process_runs(paragraph.runs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 153, in process_runs
+    pattern = re.compile(f'({word1})\s+({word2})', re.IGNORECASE)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 289, in compile
+    return _compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 350, in _compile
+    p = _compiler.compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_compiler.py", line 748, in compile
+    p = _parser.parse(p, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_parser.py", line 985, in parse
+    raise source.error("unbalanced parenthesis")
+re.PatternError: unbalanced parenthesis at position 7
+2025-04-27 07:49:38,214 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:49:38] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 07:49:50,122 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Neo\\Documents\\GitHub\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 07:49:50,232 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:49:51,459 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:49:51,464 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 07:49:54,322 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:49:54] "GET / HTTP/1.1" 200 -
+2025-04-27 07:49:54,348 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:49:54] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:49:54,349 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:49:54] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:49:54,350 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:49:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:49:54,401 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:49:54] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:49:54,413 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:49:54] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:50:10,350 - __main__ - INFO - File saved to: uploads\20250427_075010_1.docx
+2025-04-27 07:50:10,351 - __main__ - INFO - Starting analysis for file: uploads\20250427_075010_1.docx
+2025-04-27 07:50:10,702 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 07:50:11,625 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:50:13,792 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:50:14,395 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:50:16,560 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:50:18,014 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:50:21,699 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:50:21,712 - __main__ - ERROR - Error during analysis: nothing to repeat at position 10
+Traceback (most recent call last):
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\app.py", line 95, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags, user_request_text)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 286, in analysis_file
+    results[analysis_type] = self.punctuation_processing(
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        result.choices[0].message.content,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        path_to_file
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 211, in punctuation_processing
+    changes = self.punctuation_change_to_docx(path_to_file, word_pairs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 170, in punctuation_change_to_docx
+    changes = process_runs(paragraph.runs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 153, in process_runs
+    pattern = re.compile(f'({word1})\s+({word2})', re.IGNORECASE)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 289, in compile
+    return _compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 350, in _compile
+    p = _compiler.compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_compiler.py", line 748, in compile
+    p = _parser.parse(p, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_parser.py", line 980, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_parser.py", line 459, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+                ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       not nested and not items))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_parser.py", line 863, in _parse
+    p = _parse_sub(source, state, sub_verbose, nested + 1)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_parser.py", line 459, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+                ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       not nested and not items))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_parser.py", line 686, in _parse
+    raise source.error("nothing to repeat",
+                       source.tell() - here + len(this))
+re.PatternError: nothing to repeat at position 10
+2025-04-27 07:50:21,725 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:50:21] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 07:50:38,135 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:50:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:50:38,135 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:50:38] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:51:01,256 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Neo\\Documents\\GitHub\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 07:51:01,372 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:51:02,704 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:51:02,709 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 07:51:07,537 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:51:07] "GET / HTTP/1.1" 200 -
+2025-04-27 07:51:07,569 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:51:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:51:07,571 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:51:07] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:51:07,572 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:51:07] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:51:07,613 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:51:07] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:51:07,651 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:51:07] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:51:14,149 - __main__ - INFO - File saved to: uploads\20250427_075114_1.docx
+2025-04-27 07:51:14,150 - __main__ - INFO - Starting analysis for file: uploads\20250427_075114_1.docx
+2025-04-27 07:51:14,478 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 07:51:15,148 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:51:17,245 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:51:18,660 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:51:22,137 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:51:22,154 - __main__ - ERROR - Error during analysis: unbalanced parenthesis at position 7
+Traceback (most recent call last):
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\app.py", line 95, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags, user_request_text)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 286, in analysis_file
+    results[analysis_type] = self.punctuation_processing(
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        result.choices[0].message.content,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        path_to_file
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 211, in punctuation_processing
+    changes = self.punctuation_change_to_docx(path_to_file, word_pairs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 170, in punctuation_change_to_docx
+    changes = process_runs(paragraph.runs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 153, in process_runs
+    pattern = re.compile(f'({word1})\s+({word2})', re.IGNORECASE)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 289, in compile
+    return _compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 350, in _compile
+    p = _compiler.compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_compiler.py", line 748, in compile
+    p = _parser.parse(p, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_parser.py", line 985, in parse
+    raise source.error("unbalanced parenthesis")
+re.PatternError: unbalanced parenthesis at position 7
+2025-04-27 07:51:22,163 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:51:22] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 07:51:29,116 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:51:29] "GET / HTTP/1.1" 200 -
+2025-04-27 07:51:29,142 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:51:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:51:29,143 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:51:29] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:51:29,144 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:51:29] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:51:29,155 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:51:29] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:51:29,197 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:51:29] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:52:29,136 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Neo\\Documents\\GitHub\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 07:52:29,247 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:52:30,547 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:52:30,553 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 07:52:39,675 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:52:39] "GET / HTTP/1.1" 200 -
+2025-04-27 07:52:39,706 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:52:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:52:39,712 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:52:39] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:52:39,712 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:52:39] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:52:39,748 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:52:39] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:52:39,784 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:52:39] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:52:41,757 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:52:41] "GET / HTTP/1.1" 200 -
+2025-04-27 07:52:41,788 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:52:41] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-04-27 07:52:41,789 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:52:41] "GET /static/js/analyze.js HTTP/1.1" 200 -
+2025-04-27 07:52:41,789 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:52:41] "GET /static/images/files_types.png HTTP/1.1" 200 -
+2025-04-27 07:52:41,797 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:52:41] "GET /static/css/normalize.css HTTP/1.1" 200 -
+2025-04-27 07:52:41,928 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:52:41] "GET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1" 200 -
+2025-04-27 07:52:42,310 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:52:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-27 07:52:49,441 - __main__ - INFO - File saved to: uploads\20250427_075249_1.docx
+2025-04-27 07:52:49,441 - __main__ - INFO - Starting analysis for file: uploads\20250427_075249_1.docx
+2025-04-27 07:52:49,781 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 07:52:50,373 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:52:52,571 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:52:54,107 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:52:57,575 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:52:57,592 - __main__ - ERROR - Error during analysis: unbalanced parenthesis at position 7
+Traceback (most recent call last):
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\app.py", line 95, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags, user_request_text)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 286, in analysis_file
+    results[analysis_type] = self.punctuation_processing(
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        result.choices[0].message.content,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        path_to_file
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 211, in punctuation_processing
+    changes = self.punctuation_change_to_docx(path_to_file, word_pairs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 170, in punctuation_change_to_docx
+    changes = process_runs(paragraph.runs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 153, in process_runs
+    pattern = re.compile(f'({word1})\s+({word2})', re.IGNORECASE)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 289, in compile
+    return _compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 350, in _compile
+    p = _compiler.compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_compiler.py", line 748, in compile
+    p = _parser.parse(p, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_parser.py", line 985, in parse
+    raise source.error("unbalanced parenthesis")
+re.PatternError: unbalanced parenthesis at position 7
+2025-04-27 07:52:57,601 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:52:57] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 07:53:00,811 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:53:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:53:00,811 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:53:00] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:54:09,665 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Neo\\Documents\\GitHub\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 07:54:09,778 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:54:11,103 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:54:11,108 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 07:54:12,385 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:54:12] "GET / HTTP/1.1" 200 -
+2025-04-27 07:54:12,417 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:54:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:54:12,418 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:54:12] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:54:12,419 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:54:12] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:54:12,475 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:54:12] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:54:12,486 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:54:12] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:54:16,790 - __main__ - INFO - File saved to: uploads\20250427_075416_1.docx
+2025-04-27 07:54:16,790 - __main__ - INFO - Starting analysis for file: uploads\20250427_075416_1.docx
+2025-04-27 07:54:17,103 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 07:54:17,656 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:54:19,895 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:54:21,368 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:54:24,870 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:54:24,888 - __main__ - ERROR - Error during analysis: unbalanced parenthesis at position 7
+Traceback (most recent call last):
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\app.py", line 95, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags, user_request_text)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 286, in analysis_file
+    results[analysis_type] = self.punctuation_processing(
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        result.choices[0].message.content,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        path_to_file
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 211, in punctuation_processing
+    changes = self.punctuation_change_to_docx(path_to_file, word_pairs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 170, in punctuation_change_to_docx
+    changes = process_runs(paragraph.runs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 153, in process_runs
+    pattern = re.compile(f'({word1})\s+({word2})', re.IGNORECASE)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 289, in compile
+    return _compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 350, in _compile
+    p = _compiler.compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_compiler.py", line 748, in compile
+    p = _parser.parse(p, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_parser.py", line 985, in parse
+    raise source.error("unbalanced parenthesis")
+re.PatternError: unbalanced parenthesis at position 7
+2025-04-27 07:54:24,896 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:54:24] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 07:54:30,280 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Neo\\Documents\\GitHub\\hantaton-2025\\service\\main.py', reloading
+2025-04-27 07:54:30,394 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 07:54:31,558 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 07:54:31,563 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 07:55:27,758 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:55:27] "GET / HTTP/1.1" 200 -
+2025-04-27 07:55:27,784 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:55:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:55:27,785 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:55:27] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:55:27,789 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:55:27] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:55:27,797 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:55:27] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:55:27,828 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:55:27] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:55:35,207 - __main__ - INFO - File saved to: uploads\20250427_075535_docx
+2025-04-27 07:55:35,208 - __main__ - INFO - Starting analysis for file: uploads\20250427_075535_docx
+2025-04-27 07:55:35,531 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 07:55:36,042 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 400 Bad Request"
+2025-04-27 07:55:36,043 - __main__ - ERROR - Error during analysis: (URL('https://gigachat.devices.sberbank.ru/api/v1/files'), 400, b'{"status":400,"message":"File format application/octet-stream is not supported"}\n', Headers({'server': 'SynGX', 'date': 'Sun, 27 Apr 2025 02:55:36 GMT', 'content-type': 'application/json; charset=utf-8', 'content-length': '81', 'connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-allow-headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'access-control-allow-methods': 'GET, POST, DELETE, OPTIONS', 'access-control-allow-origin': 'https://beta.saluteai.sberdevices.ru', 'x-request-id': 'c14ffb3b-f258-4d71-9038-89e7978c6965', 'x-session-id': 'be546347-aeb7-4b7c-9240-a99ab2cc1e63', 'allow': 'GET, POST', 'strict-transport-security': 'max-age=31536000; includeSubDomains'}))
+Traceback (most recent call last):
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\app.py", line 95, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags, user_request_text)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 256, in analysis_file
+    file = self.giga.upload_file(open(path_to_file, "rb"))
+  File "C:\Users\Neo\Documents\GitHub\hantaton-2025\.venv\Lib\site-packages\gigachat\client.py", line 294, in upload_file
+    return self._decorator(
+           ~~~~~~~~~~~~~~~^
+        lambda: post_files.sync(self._client, file=file, purpose=purpose, access_token=self.token)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Neo\Documents\GitHub\hantaton-2025\.venv\Lib\site-packages\gigachat\client.py", line 260, in _decorator
+    return call()
+  File "C:\Users\Neo\Documents\GitHub\hantaton-2025\.venv\Lib\site-packages\gigachat\client.py", line 295, in <lambda>
+    lambda: post_files.sync(self._client, file=file, purpose=purpose, access_token=self.token)
+            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Neo\Documents\GitHub\hantaton-2025\.venv\Lib\site-packages\gigachat\api\post_files.py", line 36, in sync
+    return build_response(response, UploadedFile)
+  File "C:\Users\Neo\Documents\GitHub\hantaton-2025\.venv\Lib\site-packages\gigachat\api\utils.py", line 85, in build_response
+    raise ResponseError(response.url, response.status_code, response.content, response.headers)
+gigachat.exceptions.ResponseError: (URL('https://gigachat.devices.sberbank.ru/api/v1/files'), 400, b'{"status":400,"message":"File format application/octet-stream is not supported"}\n', Headers({'server': 'SynGX', 'date': 'Sun, 27 Apr 2025 02:55:36 GMT', 'content-type': 'application/json; charset=utf-8', 'content-length': '81', 'connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-allow-headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'access-control-allow-methods': 'GET, POST, DELETE, OPTIONS', 'access-control-allow-origin': 'https://beta.saluteai.sberdevices.ru', 'x-request-id': 'c14ffb3b-f258-4d71-9038-89e7978c6965', 'x-session-id': 'be546347-aeb7-4b7c-9240-a99ab2cc1e63', 'allow': 'GET, POST', 'strict-transport-security': 'max-age=31536000; includeSubDomains'}))
+2025-04-27 07:55:36,051 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:55:36] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 07:55:41,379 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:55:41] "GET / HTTP/1.1" 200 -
+2025-04-27 07:55:41,402 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:55:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:55:41,402 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:55:41] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:55:41,403 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:55:41] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:55:41,415 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:55:41] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:55:41,457 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:55:41] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:55:53,579 - __main__ - INFO - File saved to: uploads\20250427_075553_3.docx
+2025-04-27 07:55:53,580 - __main__ - INFO - Starting analysis for file: uploads\20250427_075553_3.docx
+2025-04-27 07:55:55,225 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:55:57,969 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:55:59,260 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 07:56:02,245 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 07:56:02,255 - __main__ - ERROR - Error during analysis: unbalanced parenthesis at position 13
+Traceback (most recent call last):
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\app.py", line 95, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags, user_request_text)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 286, in analysis_file
+    results[analysis_type] = self.punctuation_processing(
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        result.choices[0].message.content,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        path_to_file
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 211, in punctuation_processing
+    changes = self.punctuation_change_to_docx(path_to_file, word_pairs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 170, in punctuation_change_to_docx
+    changes = process_runs(paragraph.runs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 153, in process_runs
+    pattern = re.compile(f'({word1})\s+({word2})', re.IGNORECASE)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 289, in compile
+    return _compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 350, in _compile
+    p = _compiler.compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_compiler.py", line 748, in compile
+    p = _parser.parse(p, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_parser.py", line 985, in parse
+    raise source.error("unbalanced parenthesis")
+re.PatternError: unbalanced parenthesis at position 13
+2025-04-27 07:56:02,262 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:56:02] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 07:58:44,999 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:44] "GET / HTTP/1.1" 200 -
+2025-04-27 07:58:45,023 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:58:45,026 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:45] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:58:45,027 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:45] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:58:45,029 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:45] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:58:45,042 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:45] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:58:47,296 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:47] "GET / HTTP/1.1" 200 -
+2025-04-27 07:58:47,322 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:58:47,325 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:47] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:58:47,325 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:47] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:58:47,335 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:47] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:58:47,384 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:47] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:58:51,544 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:51] "GET / HTTP/1.1" 200 -
+2025-04-27 07:58:51,565 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:58:51,567 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:51] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:58:51,567 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:51] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:58:51,576 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:51] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:58:51,616 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:51] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:58:55,683 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:55] "GET / HTTP/1.1" 200 -
+2025-04-27 07:58:55,704 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:58:55,705 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:55] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:58:55,706 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:55] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:58:55,717 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:55] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:58:55,758 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:55] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:58:56,864 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:56] "GET / HTTP/1.1" 200 -
+2025-04-27 07:58:56,887 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:58:56,892 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:56] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:58:56,895 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:56] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:58:56,899 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:56] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:58:56,912 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:58:56] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 07:59:00,292 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:59:00] "GET / HTTP/1.1" 200 -
+2025-04-27 07:59:00,317 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:59:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 07:59:00,322 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:59:00] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 07:59:00,324 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:59:00] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 07:59:00,327 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:59:00] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 07:59:00,368 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 07:59:00] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 08:00:12,444 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Neo\\Documents\\GitHub\\hantaton-2025\\app.py', reloading
+2025-04-27 08:00:12,573 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 08:00:13,837 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 08:00:13,841 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 08:00:20,631 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:00:20] "GET / HTTP/1.1" 200 -
+2025-04-27 08:00:20,665 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:00:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 08:00:20,672 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:00:20] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 08:00:20,701 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:00:20] "GET /static/js/analyze.js HTTP/1.1" 200 -
+2025-04-27 08:00:20,708 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:00:20] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 08:00:20,745 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:00:20] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 08:01:19,210 - __main__ - ERROR - File type not allowed: Igry_ChGKshechki_2024_2025.xlsx
+2025-04-27 08:01:19,212 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:01:19] "[31m[1mPOST /upload HTTP/1.1[0m" 400 -
+2025-04-27 08:03:39,928 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Neo\\Documents\\GitHub\\hantaton-2025\\app.py', reloading
+2025-04-27 08:03:40,090 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 08:03:41,427 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 08:03:41,432 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 08:03:42,554 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Neo\\Documents\\GitHub\\hantaton-2025\\app.py', reloading
+2025-04-27 08:03:42,654 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 08:03:43,831 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 08:03:43,835 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 08:03:49,252 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 08:03:49,253 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 08:03:49,254 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 08:03:50,268 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 08:03:50,273 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 08:04:19,488 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:04:19] "GET / HTTP/1.1" 200 -
+2025-04-27 08:04:19,515 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:04:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 08:04:19,516 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:04:19] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 08:04:19,517 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:04:19] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 08:04:19,529 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:04:19] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 08:04:19,571 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:04:19] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 08:05:08,610 - __main__ - INFO - File saved to: uploads\20250427_080508_Igry_ChGKshechki_2024_2025.xlsx
+2025-04-27 08:05:08,611 - __main__ - INFO - Starting analysis for file: uploads\20250427_080508_Igry_ChGKshechki_2024_2025.xlsx
+2025-04-27 08:05:08,973 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 08:05:10,471 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 400 Bad Request"
+2025-04-27 08:05:10,472 - __main__ - ERROR - Error during analysis: (URL('https://gigachat.devices.sberbank.ru/api/v1/files'), 400, b'{\n  "status" : 400,\n  "message": "File format is not supported"\n}\n', Headers({'server': 'SynGX', 'date': 'Sun, 27 Apr 2025 03:05:10 GMT', 'content-type': 'application/json;charset=UTF-8', 'content-length': '66', 'connection': 'keep-alive', 'allow': 'GET, POST', 'strict-transport-security': 'max-age=31536000; includeSubDomains'}))
+Traceback (most recent call last):
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\app.py", line 95, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags, user_request_text)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 256, in analysis_file
+    file = self.giga.upload_file(open(path_to_file, "rb"))
+  File "C:\Users\Neo\Documents\GitHub\hantaton-2025\.venv\Lib\site-packages\gigachat\client.py", line 294, in upload_file
+    return self._decorator(
+           ~~~~~~~~~~~~~~~^
+        lambda: post_files.sync(self._client, file=file, purpose=purpose, access_token=self.token)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Neo\Documents\GitHub\hantaton-2025\.venv\Lib\site-packages\gigachat\client.py", line 260, in _decorator
+    return call()
+  File "C:\Users\Neo\Documents\GitHub\hantaton-2025\.venv\Lib\site-packages\gigachat\client.py", line 295, in <lambda>
+    lambda: post_files.sync(self._client, file=file, purpose=purpose, access_token=self.token)
+            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Neo\Documents\GitHub\hantaton-2025\.venv\Lib\site-packages\gigachat\api\post_files.py", line 36, in sync
+    return build_response(response, UploadedFile)
+  File "C:\Users\Neo\Documents\GitHub\hantaton-2025\.venv\Lib\site-packages\gigachat\api\utils.py", line 85, in build_response
+    raise ResponseError(response.url, response.status_code, response.content, response.headers)
+gigachat.exceptions.ResponseError: (URL('https://gigachat.devices.sberbank.ru/api/v1/files'), 400, b'{\n  "status" : 400,\n  "message": "File format is not supported"\n}\n', Headers({'server': 'SynGX', 'date': 'Sun, 27 Apr 2025 03:05:10 GMT', 'content-type': 'application/json;charset=UTF-8', 'content-length': '66', 'connection': 'keep-alive', 'allow': 'GET, POST', 'strict-transport-security': 'max-age=31536000; includeSubDomains'}))
+2025-04-27 08:05:10,479 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:05:10] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 08:07:47,785 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Neo\\Documents\\GitHub\\hantaton-2025\\app.py', reloading
+2025-04-27 08:07:47,942 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 08:07:49,155 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 08:07:49,159 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 08:09:02,380 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:09:02] "GET / HTTP/1.1" 200 -
+2025-04-27 08:09:02,449 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:09:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 08:09:02,451 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:09:02] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 08:09:02,453 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:09:02] "GET /static/js/analyze.js HTTP/1.1" 200 -
+2025-04-27 08:09:02,467 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:09:02] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 08:09:02,484 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:09:02] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 08:09:33,003 - __main__ - INFO - File saved to: uploads\20250427_080933_Microsoft_Word_1.docx
+2025-04-27 08:09:33,004 - __main__ - INFO - Starting analysis for file: uploads\20250427_080933_Microsoft_Word_1.docx
+2025-04-27 08:09:33,449 - httpx - INFO - HTTP Request: POST https://ngw.devices.sberbank.ru:9443/api/v2/oauth "HTTP/1.1 200 OK"
+2025-04-27 08:09:34,552 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 08:09:36,795 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 08:09:38,608 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/files "HTTP/1.1 200 OK"
+2025-04-27 08:09:49,285 - httpx - INFO - HTTP Request: POST https://gigachat.devices.sberbank.ru/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-27 08:09:49,364 - __main__ - ERROR - Error during analysis: unbalanced parenthesis at position 4
+Traceback (most recent call last):
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\app.py", line 96, in upload_file
+    results = gigacheck.analysis_file(file_path, analysis_flags, user_request_text)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 286, in analysis_file
+    results[analysis_type] = self.punctuation_processing(
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        result.choices[0].message.content,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        path_to_file
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 211, in punctuation_processing
+    changes = self.punctuation_change_to_docx(path_to_file, word_pairs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 170, in punctuation_change_to_docx
+    changes = process_runs(paragraph.runs)
+  File "c:\Users\Neo\Documents\GitHub\hantaton-2025\service\main.py", line 153, in process_runs
+    pattern = re.compile(f'({word1})\s+({word2})', re.IGNORECASE)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 289, in compile
+    return _compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\__init__.py", line 350, in _compile
+    p = _compiler.compile(pattern, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_compiler.py", line 748, in compile
+    p = _parser.parse(p, flags)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\re\_parser.py", line 985, in parse
+    raise source.error("unbalanced parenthesis")
+re.PatternError: unbalanced parenthesis at position 4
+2025-04-27 08:09:49,372 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:09:49] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-04-27 08:10:03,071 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:10:03] "GET / HTTP/1.1" 200 -
+2025-04-27 08:10:03,095 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:10:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 08:10:03,098 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:10:03] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 08:10:03,098 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:10:03] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 08:10:03,108 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:10:03] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 08:10:03,169 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:10:03] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 08:13:37,129 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 08:13:37,129 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 08:13:37,131 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 08:13:38,183 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 08:13:38,188 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 08:13:39,620 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:13:39] "GET / HTTP/1.1" 200 -
+2025-04-27 08:13:39,660 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:13:39] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 08:13:39,661 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:13:39] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 08:13:39,675 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:13:39] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-04-27 08:13:39,699 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:13:39] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 08:13:39,769 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:13:39] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 08:17:17,795 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 08:17:17,796 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 08:17:17,797 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 08:17:18,828 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 08:17:18,832 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 08:17:21,695 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:17:21] "GET / HTTP/1.1" 200 -
+2025-04-27 08:17:21,738 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:17:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 08:17:21,739 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:17:21] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 08:17:21,739 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:17:21] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 08:17:21,776 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:17:21] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 08:17:21,846 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:17:21] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 08:18:23,954 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 08:18:23,954 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 08:18:23,956 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 08:18:25,052 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 08:18:25,056 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 08:18:27,341 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:18:27] "GET / HTTP/1.1" 200 -
+2025-04-27 08:18:27,393 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:18:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 08:18:27,393 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:18:27] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 08:18:27,394 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:18:27] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 08:18:27,430 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:18:27] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 08:18:27,504 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:18:27] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 08:19:41,351 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 08:19:41,352 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 08:19:41,353 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 08:19:42,430 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 08:19:42,435 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 08:19:45,662 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:19:45] "GET / HTTP/1.1" 200 -
+2025-04-27 08:19:45,727 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:19:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 08:19:45,749 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:19:45] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 08:19:45,750 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:19:45] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 08:19:45,758 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:19:45] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 08:19:45,835 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:19:45] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -
+2025-04-27 08:20:50,006 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-27 08:20:50,006 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 08:20:50,008 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 08:20:51,076 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 08:20:51,080 - werkzeug - INFO -  * Debugger PIN: 882-453-887
+2025-04-27 08:20:53,141 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:20:53] "GET / HTTP/1.1" 200 -
+2025-04-27 08:20:53,219 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:20:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-27 08:20:53,221 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:20:53] "[36mGET /static/images/files_types.png HTTP/1.1[0m" 304 -
+2025-04-27 08:20:53,223 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:20:53] "[36mGET /static/js/analyze.js HTTP/1.1[0m" 304 -
+2025-04-27 08:20:53,235 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:20:53] "[36mGET /static/css/normalize.css HTTP/1.1[0m" 304 -
+2025-04-27 08:20:53,305 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 08:20:53] "[36mGET /static/fonts/Inter_18pt-Regular.woff2 HTTP/1.1[0m" 304 -

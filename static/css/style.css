@@ -80,7 +80,7 @@ body {
 }
 
 .btn--primary:hover {
-    background-color: darken(var(--addt-color), 10%);
+    background-color: var(--addt-color);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(221, 3, 255, 0.2);
 }
